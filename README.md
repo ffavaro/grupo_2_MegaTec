@@ -15,10 +15,12 @@ MegaTec somos especialistas productos tecnologicos y accesorios de todo tipo. En
  cd MegaTec
  npm install
 ```
+
 ## Ejecucion 
  ```sh
  node app.js / nodemon app.js
 ```
+
 #### Lenguajes de programacion del proyecto
 - [Html]
 - [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
