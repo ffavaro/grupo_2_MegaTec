@@ -21,6 +21,10 @@ MegaTec somos especialistas productos tecnologicos y accesorios de todo tipo. En
  node app.js / nodemon app.js
 ```
 
+### Wirefrema
+- Formulario de Registro(https://wireframe.cc/SvIXBE)
+- Detalle de producto(https://wireframe.cc/pro/pp/313a331a0547985)
+
 #### Lenguajes de programacion del proyecto
 - [Html]
 - [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
