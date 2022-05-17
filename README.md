@@ -24,6 +24,7 @@ MegaTec somos especialistas productos tecnologicos y accesorios de todo tipo. En
 ### Wireframe
 - [Formulario de Registro](https://wireframe.cc/SvIXBE)
 - [Detalle de producto](https://wireframe.cc/pro/pp/313a331a0547985)
+- [Login](https://wireframe.cc/IO4miQ)
 
 #### Lenguajes de programacion del proyecto
 - [Html]
