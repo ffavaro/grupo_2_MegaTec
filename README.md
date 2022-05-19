@@ -8,6 +8,7 @@ MegaTec somos especialistas en venta y asesoramiento de microprocesadores.Te pod
 - Francisco Favaro
 	Tengo 28, soy de Cordoba Capital. Trabajo como Desarrollador web jr, especialista en microprocesadores Intel,  con 5 años de experiencia en venta en el mercado. Mis hobbits son ver series, andar en bici y leer.
 - Matias Maidana.
+    tengo 25 años soy de Corrientes Capita, me emociona aprender cosas nuevas referente a la tecnologia y programacion. espero trabajar de esto algun dia y desarrolar diversas cosas, ademas tambien estoy haciendo un curso en diseño y programacion de videojuegos que es uno de mis hobbits principales. 
 
 ## Instalacion
 ```sh
