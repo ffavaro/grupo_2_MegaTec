@@ -6,7 +6,7 @@ MegaTec somos especialistas en venta y asesoramiento de microprocesadores.Te pod
 ### Integrantes del Equipo
 - Clara Acevedo
 - Francisco Favaro
-	Tengo 28, soy de Cordoba Capital. Trabajo como Desarrollador web jr, especialista en microprocesadores, Con dos añoas de Trabajo en intla. Mis hobbits son ver series, andar en bici y leer.
+	Tengo 28, soy de Cordoba Capital. Trabajo como Desarrollador web jr, especialista en microprocesadores Intel,  con 5 años de experiencia en venta en el mercado. Mis hobbits son ver series, andar en bici y leer.
 - Matias Maidana.
 
 ## Instalacion
