@@ -6,12 +6,12 @@ Hoy en dìa las computadoras se han vuelto parte fundamental de nuestra vida dia
 
 
 ### Integrantes del Equipo
-Los creadores de MEGATEC, son tres jovenes apasionados por la tecnologìa
-- Clara Acevedo
+Los creadores de MEGATEC, son tres jovenes apasionados por la tecnologìa y el mundo virtual, que se enfocan en ofrecer los mejores productos del mercado a sus clientes y satisfacer sus necesidades de compra. Acompañame a conocerlos:
+- Clara Acevedo: Colombiana, tiene 23 años es ingeniera quìmica y ahora mismo esta enfocada en el mundo de la programaciòn, ha trabajado como asesora en tiendas tecnològicas, asì que si quieres un consejo tecnològico ella te lo puede dar.
 - Francisco Favaro
-	Tengo 28, soy de Cordoba Capital. Trabajo como Desarrollador web jr, especialista en microprocesadores Intel,  con 5 años de experiencia en venta en el mercado. Mis hobbits son ver series, andar en bici y leer.
+Tiene 28 años, es de Cordoba Capital. Trabaja como Desarrollador web jr, especialista en procesadores Intel,  con 5 años de experiencia en venta en el mercado. Sus hobbies son ver series, andar en bici y leer.
 - Matias Maidana.
-    tengo 25 años soy de Corrientes Capita, me emociona aprender cosas nuevas referente a la tecnologia y programacion. espero trabajar de esto algun dia y desarrolar diversas cosas, ademas tambien estoy haciendo un curso en diseño y programacion de videojuegos que es uno de mis hobbits principales. 
+   Tiene 25 años,es de Corrientes Capita, le emociona aprender cosas nuevas referente a la tecnologia y programacion. Su trabajo y hobbie es diseñar y programar video juegos. Él es el experto del mundo gamer.
 
 ## Instalacion
 ```sh
@@ -41,11 +41,11 @@ Los creadores de MEGATEC, son tres jovenes apasionados por la tecnologìa
 
 ### Sitios similares
  ```sh
- Sitios similares con la mismas metodologias de compras y productos al cual apunto Megatec. 
+ Sitios similares con la mismas metodologias de compras y productos al cual apunta Megatec. 
  Siguendo un circuito de compra de productos con un usuario, con carrito de ventas y el envio al domicilio.
 ```
-- https://tiendamia.com/ar/producto?amz=B07HHN6KBZ  Por la estetica al mostra el producto en venta. 
-- https://www.pcarts.com/componentes-microinformatica/microprocesadores.html Por su listado de microprcesadores.
+- https://tiendamia.com/ar/producto?amz=B07HHN6KBZ  Por la estetica al mostrar el producto en venta. 
+- https://www.pcarts.com/componentes-microinformatica/microprocesadores.html Por su listado de microprocesadores.
 - https://www.hypergaming.com.ar/procesadores/  Por la galeria que muestra a los distintos microprcesadores.
 - https://compragamer.com/?seccion=3&cate=27 -> Por su forma de mostrar los microprcesadores y el proceso de compra del mismo.
 - https://www.venex.com.ar/www.venex.com.ar/componentes-de-pc/microprocesadores?vmm=14 -> Por el modelos de  el listado de productos y forma de venta.
