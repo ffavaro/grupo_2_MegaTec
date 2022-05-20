@@ -1,9 +1,12 @@
-# MegaTec
+# MEGATEC
 
 #### Informacion
-MegaTec somos especialistas en venta y asesoramiento de microprocesadores.Te podemos ayudar a elegir los mejores productos para tus necesidades o las de tu empresa. Brindando servicios de presupuesto y ventas por mayor/menor.Ofreciendo las ultimas generaciones de microprocesadores, para hacer tu computadora más eficiente y veloz,para la hora de trabajar, estudiar,jugar o ver tus series en netflix disfrutes de la mejor calidad de procesamiento. 
+
+Hoy en dìa las computadoras se han vuelto parte fundamental de nuestra vida diaria, ya sea por cuestiones de trabajo, estudio o diversiòn, de ahì la importancia de tener un equipo de computo àgil y eficiente, caracterìsticas que nos brinda un buen procesador. Es por esta razòn que nace MEGATEC una empresa especialista en venta y asesoramiento de procesadores para todo tipo de ordenadores. Contamos con un amplio catàlogo de productos  que se adapatan a tus necesidades o las de tu empresa, ya sea que quieras tener una computadora bien equipada para ser el pròximo lider del mundo gamer, o que quieras tener una computadora que te permita hacer tus trabajos de forma ràpida; brindamos servicios de presupuesto y ventas al por mayor/menor,y ofrecemos las ultimas generaciones de procesadores para hacer de tu computadora una maquina más eficiente y veloz a la hora de trabajar, estudiar,jugar o simplemente ver tus series en netflix. Con MEGATEC disfrutaràs de la mejor calidad de procesamiento. 
+
 
 ### Integrantes del Equipo
+Los creadores de MEGATEC, son tres jovenes apasionados por la tecnologìa
 - Clara Acevedo
 - Francisco Favaro
 	Tengo 28, soy de Cordoba Capital. Trabajo como Desarrollador web jr, especialista en microprocesadores Intel,  con 5 años de experiencia en venta en el mercado. Mis hobbits son ver series, andar en bici y leer.
