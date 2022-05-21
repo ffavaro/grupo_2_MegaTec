@@ -30,6 +30,7 @@ Tiene 28 años, es de Cordoba Capital. Trabaja como Desarrollador web jr, especi
 - [Formulario de Registro](https://wireframe.cc/SvIXBE)
 - [Detalle de producto](https://wireframe.cc/pro/pp/313a331a0547985)
 - [Login](https://wireframe.cc/IO4miQ)
+- [Carrito de Compras](https://wireframe.cc/pro/pp/075fe4cdf549721)
 
 #### Lenguajes de programacion del proyecto
 - [Html]
