@@ -25,14 +25,14 @@ Tiene 28 años, es de Cordoba Capital. Trabaja como Desarrollador web jr, especi
  node app.js / nodemon app.js
 ```
 
-### Wireframe
+## Wireframe
 - [Home]( https://wireframe.cc/pro/pp/7267bbf42548946)
 - [Formulario de Registro](https://wireframe.cc/SvIXBE)
 - [Detalle de producto](https://wireframe.cc/pro/pp/313a331a0547985)
 - [Login](https://wireframe.cc/IO4miQ)
 - [Carrito de Compras](https://wireframe.cc/pro/pp/075fe4cdf549721)
 
-#### Lenguajes de programacion del proyecto
+## Lenguajes de programacion del proyecto
 - [Html]
 - [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 - [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript)
@@ -40,7 +40,7 @@ Tiene 28 años, es de Cordoba Capital. Trabaja como Desarrollador web jr, especi
 - [Reactjs](https://es.reactjs.org/) 
 - [MySql]
 
-### Sitios similares
+## Sitios similares
  ```sh
  Sitios similares con la mismas metodologias de compras y productos al cual apunta Megatec. 
  Siguendo un circuito de compra de productos con un usuario, con carrito de ventas y el envio al domicilio.
