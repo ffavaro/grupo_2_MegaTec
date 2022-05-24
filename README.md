@@ -50,3 +50,6 @@ Tiene 28 años, es de Cordoba Capital. Trabaja como Desarrollador web jr, especi
 - https://www.hypergaming.com.ar/procesadores/  Por la galeria que muestra a los distintos microprcesadores.
 - https://compragamer.com/?seccion=3&cate=27 -> Por su forma de mostrar los microprcesadores y el proceso de compra del mismo.
 - https://www.venex.com.ar/www.venex.com.ar/componentes-de-pc/microprocesadores?vmm=14 -> Por el modelos de  el listado de productos y forma de venta.
+
+## Trello 
+- [Trello](https://trello.com/b/6g4jkbqz/proyecto-integrador)
