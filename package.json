@@ -1,0 +1,23 @@
+{
+  "name": "grupo_2_megatec",
+  "version": "1.0.0",
+  "description": "Hoy en dìa las computadoras se han vuelto parte fundamental de nuestra vida diaria, ya sea por cuestiones de trabajo, estudio o diversiòn, de ahì la importancia de tener un equipo de computo àgil y eficiente, caracterìsticas que nos brinda un buen procesador. Es por esta razòn que nace MEGATEC una empresa especialista en venta y asesoramiento de procesadores para todo tipo de ordenadores. Contamos con un amplio catàlogo de productos  que se adapatan a tus necesidades o las de tu empresa, ya sea que quieras tener una computadora bien equipada para ser el pròximo lider del mundo gamer, o que quieras tener una computadora que te permita hacer tus trabajos de forma ràpida; brindamos servicios de presupuesto y ventas al por mayor/menor,y ofrecemos las ultimas generaciones de procesadores para hacer de tu computadora una maquina más eficiente y veloz a la hora de trabajar, estudiar,jugar o simplemente ver tus series en netflix. Con MEGATEC disfrutaràs de la mejor calidad de procesamiento.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffavaro/grupo_2_MegaTec.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ffavaro/grupo_2_MegaTec/issues"
+  },
+  "homepage": "https://github.com/ffavaro/grupo_2_MegaTec#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
