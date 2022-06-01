@@ -1,0 +1,106 @@
+*{
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.bar-top
+{
+    display: block;
+    text-align: center;
+    margin: 12px 12px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+body {
+    background-image: url('../img/backgound.png'); 
+    background-size: 100% auto; 
+    background-repeat: no-repeat; 
+    
+}
+
+body h1 {
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+main  {
+    display: flex;
+    text-align: center;
+    margin: 12px 12px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.create-form
+{
+    border: 1px solid blue;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-image: linear-gradient(to right, #0860b3 0%, #0066ff 100%); 
+    padding: 20px 50px;
+}
+
+.control-article
+{
+    display: block;
+}
+
+.control-form
+{
+    display: block;
+    padding: 12px 12px;
+    font-size: 18px;
+}
+
+.control-form i {
+    margin: 3px;
+    padding: 5px;
+}
+
+.control-form input {
+    padding: 10px 10px;
+    width: 100%;
+    border: solid 1px black;
+}
+
+.control-form label
+{
+    color: white;
+    display: block;
+    margin: 5px 5px;
+    font-size: 16px;
+}
+
+
+.control-form nav a
+{
+    color: white;
+    display: block;
+    margin: 5px 5px;
+    font-size: 16px;
+}
+
+.control-article button
+{
+ margin: 5px;
+ padding: 10px;
+ font-size: 16px;
+ width: 100%;
+ background-color: #0066ff;
+ color: white;
+}
+
+
+footer {
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registarse</title>
+    <link rel="stylesheet" href="./css/styles-register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2da8e91210.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <article>
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><span aria-current="page">Registarse</span></li>
+                </ul>
+            </nav>
+        </article>
+    </header>
+    <main>
+        <form action="/newAccount" method="post" class="create-form">
+            <article>
+                <div class="control-form">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="user" name="name" placeholder="Ingrese su nombre" required maxlength="20">
+                </div>
+                <div class="control-form">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="user" name="apellido" placeholder="Ingrese su apellido" required
+                        maxlength="20">
+                </div>
+                <div class="control-form">
+                    <label for="email">Email</label>
+                    <input type="email" id="user" name="email" placeholder="Ingrese su email" required maxlength="20">
+                </div>
+                <div class="control-form">
+                    <label for="name">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Ingrese su Password" required
+                        maxlength="20">
+                </div>
+                <div class="control-form">
+                    <label for="confirmPassword">Nombre</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Ingrese su password"
+                        required maxlength="20">
+                </div>
+            </article>
+            <article>
+                <div class="control-form">
+                    <label for="domicilio">Domicilio</label>
+                    <input type="text" id="domicilio" name="domicilio" placeholder="Ingrese su domicilio" required
+                        maxlength="20">
+                </div>
+                <div class="control-form">
+                    <label for="barrio">Barrio</label>
+                    <input type="text" id="barrio" name="barrio" placeholder="Ingrese su barrio" required
+                        maxlength="20">
+                </div>
+                <div class="control-form">
+                    <label for="piso">Piso</label>
+                    <input type="text" id="piso" name="piso" placeholder="Numero de piso" maxlength="20">
+                </div>
+                <div class="control-form">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Ingrese su telefono" maxlength="10">
+                </div>
+                <div class="control-form">
+                    <label for="celular">Celular</label>
+                    <input type="text" id="celular" name="celular" placeholder="Ingrese su celular" required
+                        maxlength="13">
+                </div>
+                <div class="control-form">
+                    <label for="referencia">Referencias</label>
+                    <textarea name="referencia" id="referencia" cols="30" rows="10" required maxlength="100"></textarea>
+                </div>
+            </article>
+            <article>
+                <div class="control-form">
+                    <label for="avatar">Avatar</label>
+                    <input type="file" name="avatar" id="avatar" accept=".jpg, .png">
+                </div>
+            </article>
+        </form>
+    </main>
+    <footer>
+        <br>
+        <div>
+            <div>
+                <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <strong>Pagá con tarjeta o en efectivo</strong>
+            <div>
+                <p>
+                    Con MegaTec, tenés cuotas sin interés con tarjeta o efectivo en
+                    puntos de pago. ¡Y siempre es seguro!
+                </p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <i class="fa-solid fa-gift"></i>
+            </div>
+            <strong>Envío gratis desde $ 2.500</strong>
+            <div>
+                <p>
+                    Solo por estar registrad@ en MegaTec S.A tenés envíos gratis en miles de
+                    productos. Es un beneficio de MegaTec Puntos.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <strong>Seguridad, de principio a fin</strong>
+            <div>
+                <p>
+                    ¿No te gusta? ¡Devolvelo! En MegaTec S.A, no hay nada que no puedas hacer,
+                    porque estás siempre protegid@.
+                </p>
+            </div>
+        </div>
+        <div>
+            <strong>Copyright © 2022-2023 MegaTec S.A</strong>
+        </div>
+    </footer>
+</body>
+
+</html>

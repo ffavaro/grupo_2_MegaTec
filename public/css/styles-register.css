@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.breadcrumb ul {
+    display: flex;
+}
+    
+.breadcrumb li::before {
+    content: "→";
+}
+    
+.breadcrumb li:first-child::before {
+    content: "";
+}
+
+.create-form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main{
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+.control-form label
+{
+    color: black;
+    display: block;
+    margin: 5px 5px;
+    font-size: 16px;
+}
+
+.control-form input {
+    padding: 10px 10px;
+    width: 100%;
+    border: solid 1px black;
+}
