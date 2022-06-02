@@ -9,7 +9,7 @@ app.listen(3000, (req, res) => {
     console.log("Server on");
 });
 
-app.get('/', (req, res) =>{
+app.get('/singIn', (req, res) =>{
     res.sendFile(path.resolve(__dirname, './views/singIn.html'))
 })
 
