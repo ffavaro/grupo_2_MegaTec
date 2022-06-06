@@ -20,7 +20,6 @@ header{
     width: 60%;
     margin: 5px 15px;
 }
-
 .input{
     background-color: white;
     border: white solid 1px;
@@ -28,6 +27,7 @@ header{
     color: #a9a9a9;
     box-shadow: 0px 0px 10px rgb(16, 16, 16);
     width: 80%;
+    border-radius: 15px;
     display: none;
 }
 .iconos{
@@ -39,12 +39,13 @@ header{
 .lupa2{
     display: block;
 }
-
 .car, .start, .user, .lupa2{
     color: #ebebeb;
     font-size: 1.5em;
     padding-left: 10px;
-    
+    margin-left:20px;
+    position: relative;
+    left: 70px;
 } 
 .logo{
 padding: 10px;
@@ -64,14 +65,12 @@ box-shadow: 0px 0px 10px rgb(16, 16, 16);
     display: none;
     box-shadow: 0px 0px 1px rgb(16, 16, 16);
 }
-
 header ul li a{
 display: flex;
 color: black;
 text-decoration: none;
 font-size: 18px;
 display: none;
-
 }
 .fas{
     color: white;
@@ -80,17 +79,79 @@ display: none;
     margin: 0%;
     width: 100%;
 }
-
 .burger-menu{
     display: flex;
     text-align: center;
     display: block;
     margin: auto;
     font-size: 20px;
-
+    position: relative;
+    left: 35px;
 }
-
-
+.precios, .descuentos{
+    padding-top:5px
+}
+.descripciones{
+padding-top:10px;
+}
+main{
+    background-color: #ebebeb;
+    width: 98%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+.camion{
+    color: green;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: left;
+    
+}
+h2, .producto{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+    padding: 20px;
+}
+article{
+    background-color: #ebebeb;
+    padding: 20px;
+    box-shadow: 0px 0px 1px rgb(202, 199, 199);
+    font-size: 17px;
+}
+footer {
+    display: flex;
+    text-align: center;
+    background-image: url(/images/Fondo.jpeg);
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding: 80px;
+}
+.youtube,.facebook,.instagram,.comentario{
+    font-size: 2em;
+    padding-left: 20px;
+}
+.comentario{
+    margin-left: 120px;
+}
+strong{
+    display: flex;
+    flex-direction: column;
+}
+footer li a{
+    color: white; 
+    text-decoration: none;
+}
+.link-footer{
+    display: none;
+    padding-left: 15px;
+    padding-top: 10px;
+}
 @media (min-width: 500px ) {
 .input{
     display: block;
@@ -112,5 +173,24 @@ header ul li a{
     display: block;
     display: flex
 }
-
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+h2{
+    width: 100vw;
+}
+article{
+    width: 50vw;
+    align-items: stretch;
+}
+}
+@media (min-width: 1000px) {
+article{
+    width: 25vw;
+    align-items: stretch;
+}
+.link-footer{
+    display: block;
+}
 }
