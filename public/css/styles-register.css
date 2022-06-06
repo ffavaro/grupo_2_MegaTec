@@ -4,28 +4,26 @@
     box-sizing: border-box;
 }
 
-.breadcrumb ul {
+form{
     display: flex;
-}
-    
-.breadcrumb li::before {
-    content: "→";
-}
-    
-.breadcrumb li:first-child::before {
-    content: "";
+    flex-direction: column;
+    background-color: white;
+    border-radius: 3px;
+    padding: 1em;
 }
 
-.create-form {
+.control-article{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-main{
-    display: block;
-    margin: auto;
-    padding: 10px;
+.control-form-colum
+{ 
+    display: flex; 
+    flex-direction: column;
+    padding: 1em;
+    margin: 5px;
+    padding: 5px;
 }
 
 .control-form label
@@ -40,4 +38,51 @@ main{
     padding: 10px 10px;
     width: 100%;
     border: solid 1px black;
+}
+
+.control-button
+{
+    display: flex;
+    justify-content: center;
+}
+.control-button button{
+    margin: 5px 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    
+}
+
+textarea{
+    resize: none;    
+}
+
+
+@media (min-width:360px) {
+    .control-article{
+        display: block;
+        justify-content: center;
+    }
+    *{
+        box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+    }
+}
+@media (min-width:768px) {
+    .control-article{
+        display: flex;
+        justify-content: center;
+    }
+    *{
+        box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+    }
+}
+
+@media (max-width:1200px) {
+    .control-article{
+        display: flex;
+        justify-content: center;
+        max-width: 1100px;
+    }
+    *{
+        box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+    }
 }

@@ -1,7 +1,15 @@
 *{
-    margin: 0 auto;
     padding: 0px;
     box-sizing: border-box;
+}
+
+html {
+    background-image: url('../img/backgound.png'); 
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .bar-top
@@ -13,11 +21,8 @@
     padding: 8px;
 }
 
-body {
-    background-image: url('../img/backgound.png'); 
-    background-size: 100% auto; 
-    background-repeat: no-repeat; 
-    
+body{
+    margin: 0%;
 }
 
 body h1 {
@@ -77,6 +82,13 @@ main  {
     font-size: 16px;
 }
 
+.control-form-recordar
+{
+    color: white;
+    display: block;
+    margin: 5px 5px;
+    font-size: 16px;
+}
 
 .control-form nav a
 {
@@ -104,3 +116,55 @@ footer {
     margin-top: 5%;
 }
 
+
+@media (max-width:360px) {
+    .control-form label{
+        display: none;
+    }
+    .create-form
+    {
+        min-width: 350px;
+    }
+    *{
+        box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+    }
+}
+
+@media (min-width:360px) {
+    .control-form label{
+        display: none;
+    }
+    .create-form
+    {
+        width: 100%;
+    }
+    *{
+        box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+    }
+}
+
+@media (min-width:768px) {
+    main,
+    .control-article
+    {
+        max-width: 768px;
+        text-align: center;
+        margin: auto;
+    }
+    .control-form label{
+        display: block;
+    }
+    .create-form
+    {
+        width: 100%;
+    }
+    *{
+        box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+    }
+}
+
+@media (min-width:1200px) {
+    *{
+        box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+    }
+}
