@@ -15,6 +15,8 @@ form{
 .control-article{
     display: flex;
     justify-content: center;
+    border: solid 1px #ebebeb;
+    background-color: #ebebeb;
 }
 
 .control-form-colum
@@ -22,7 +24,7 @@ form{
     display: flex; 
     flex-direction: column;
     padding: 1em;
-    margin: 5px;
+    margin: 15px 15px;
     padding: 5px;
 }
 
@@ -31,7 +33,7 @@ form{
     color: black;
     display: block;
     margin: 5px 5px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .control-form input {
@@ -44,12 +46,6 @@ form{
 {
     display: flex;
     justify-content: center;
-}
-.control-button button{
-    margin: 5px 5px;
-    padding: 10px 10px;
-    font-size: 16px;
-    
 }
 
 textarea{

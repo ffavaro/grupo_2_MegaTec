@@ -100,11 +100,53 @@ header ul li a {
 }
 
 footer {
+    display: flex;
     text-align: center;
     background-image: url(/images/Fondo.jpeg);
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding: 80px;
+}
+
+
+.youtube,.facebook,.instagram,.comentario{
+    font-size: 2em;
+    padding-left: 20px;
+}
+.comentario{
+    margin-left: 120px;
+}
+strong{
+    display: flex;
+    flex-direction: column;
+}
+footer li a{
+    color: white; 
+    text-decoration: none;
+}
+
+.button-save {
+    margin: 5px 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: #0066ff;
+    color: white;
+    border-radius: 15px;
+    border: solid 1px black;
+}
+
+.button-reset {
+    margin: 5px 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: #a9a9a9;
+    border-radius: 15px;
+    border: solid 1px black;
 }
 
 @media (min-width: 500px) {

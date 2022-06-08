@@ -1,12 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/styles-productDetail.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Macondo&family=Roboto:wght@100;400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Domine&family=Macondo&family=Roboto:wght@100;400&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2da8e91210.js" crossorigin="anonymous"></script>
+    <title>Detalle del producto</title>
 </head>
+
 <body>
-    
+    <header>
+        <img class="logo" src="/images/MEGATEC (2).png"> </img>
+        <div class="Buscador">
+            <div class="input">Buscar productos..<i class="lupa"><i class="fa fa-search"></i></i></i></div>
+            <div class="iconos">
+                <i class="start"><i class="fa-solid fa-star"></i></i>
+                <a href="/register"> <i class="user"><i class="fa-solid fa-user-plus"></i></i></a>
+                <a href="/productDetail"> <i class="car"><i class="fa-solid fa-cart-plus"></i></i></a>
+                <i class="lupa2"><i class="fa fa-search"></i></i>
+            </div>
+        </div>
+        <ul class="sin-viñetas">
+            <li><a href="#">Productos</i></a></li>
+            <li><a href="#">Historial</i></a></li>
+            <li><a href="#">Ofertas</i></a></li>
+            <li><a href="#">Asesor</i></a></li>
+            <li><a href="#">Centro de Ayuda</i></a></li>
+        </ul>
+        <div class="burger-menu"> <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <main>
+        <section>
+            <article class="product">
+                <div>  
+                    <h3 class="descripciones"> Procesador AMD RYZEN 3 3200G </h3>
+                </div>
+                <br>
+                <div>
+                        <img src="images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <h2>Especificaciones</h2>
+                    <ul>
+                    <li>N.° de núcleos de CPU: 4</li>
+                    <li>N.° de subprocesos: 4</li>
+                    <li>N.° de núcleos de GPU: 8</li>
+                    <li>Reloj base: 3.6GHz</li>
+                    <li>Reloj de aumento Max: 4GHz</li>
+                    <li>Caché L1 total: 384KB</li>
+                    <li>Caché L2 total: 2MB</li>
+                    <li>Caché L3 total:4MB</li>
+                    <li>Desbloqueados: Sí</li>
+                    <li>CMOS: 12nm FinFET</li>
+                    <li>Paquete: AM4</li>
+                    <li>Versión de PCI Express: PCIe 3.0 x8</li>
+                    <li>TDP/TDP predeterminado: 65W cTDP: 45-65W</li>
+                    <li>Temp. Máx: 95°C</li>
+                    <li>Velocidad máxima de memoria: 2933MHz</li>
+                    <li>Tipo de memoria: DDR4</li>
+                    <li>Canales de memoria: 2</li>
+                    <li>Frecuencia de gráficos: 1250 MHz</li>
+                    <li>Modelo de gráficos: Radeon™ Vega 8 Graphics</li>
+                    <li>Número de núcleos de los gráficos: 8</li>
+                </ul>
+                    <br>
+                    <h2>Precio</h2>
+                    <p class="precios">$630,000 COP*</p>
+                    <p class="descuentos"> 20% off </p>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <h3>Envios</h3>
+                    <select name="select_" id="">
+                        <option value="1">Express</option>
+                        <option value="2">Normal y gratis</option>
+                        <option value="3">Normal</option>
+                    </select>
+
+                    <h2>Stock disponible</h2>
+                    <span>Cantidad:10</span>
+
+                    <h2>Colores</h2>
+                    <span>Negro</span>
+                <br>
+                    <h2>Vendedor</h2>
+                        <span><h2>Ubicación</h2></span>
+                        <p>
+                            Balvanera, Capital Federal
+                        </p>
+                        <h2>Descripciones</h2>
+                        <p>
+                            ¡Es uno de los mejores del sitio!
+                        </p>
+                    <button class="button-save">
+                        Comprar
+                    </button>
+            </article>
+        
+        </section>
+    </main>
+    <footer>
+        <br>
+        <div class="facebook"><i class="fa-brands fa-facebook"></i> </div>
+        <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+        <div class="youtube"><i class="fa-brands fa-youtube"></i></div>
+        <li class="link-footer"><a href="#">Quiénes Somos</i></a></li>
+        <li class="link-footer"><a href="#">Términos y Condiciones</i></a></li>
+        <li class="link-footer"><a href="#">Garantía y devoluciones</i></a></li>
+        <div class="comentario"><i class="fa-solid fa-comment-dots"></i></div>
+        <strong>Copyright © 2022-2023 MegaTec S.A</strong>
+    </footer>
 </body>
+
 </html>
