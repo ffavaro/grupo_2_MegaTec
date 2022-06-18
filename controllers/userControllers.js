@@ -1,6 +1,6 @@
 let controller = {
     register: function (req, res) {
-        res.render('/users/register');
+        res.render('./users/register');
     }
 }
 
