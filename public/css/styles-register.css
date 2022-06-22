@@ -11,7 +11,9 @@ form{
     border-radius: 3px;
     padding: 1em;
 }
-
+.link-del-logo{
+    width:35%
+}
 .control-article{
     display: flex;
     justify-content: center;

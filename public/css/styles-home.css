@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0 auto;
     padding: 0px;
@@ -98,6 +99,9 @@ display: none;
     position: relative;
     left: 35px;
 }
+=======
+
+>>>>>>> 8114845a7b2db05be7c4bb15c3bb4b7d145aa1d8
 .precios, .descuentos{
     padding-top:5px
 }
@@ -175,7 +179,7 @@ header ul li a{
 
 }
 .logo{
-    width: 30%;
+    width: 100%;
 }
 .lupa2{
     display: none;
@@ -183,6 +187,10 @@ header ul li a{
 .sin-viñetas{
     display: block;
     display: flex
+}
+.link-del-logo{
+    margin: 0%;
+    width: 30%;
 }
 section{
     display: flex;

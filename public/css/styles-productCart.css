@@ -3,90 +3,8 @@
     padding: 0px;
     box-sizing: border-box;
 }
-header{
-    font-family:'Anton', sans-serif;;
-    font-size: 18px;
-    background-image: url(/images/Fondo.jpeg);
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-}
-.Buscador{
-    display: flex;
-    align-items:center;
-    width: 60%;
-    margin: 5px 15px;
-}
-.input{
-    background-color: white;
-    border: white solid 1px;
-    padding: 10px;
-    color: #a9a9a9;
-    box-shadow: 0px 0px 10px rgb(16, 16, 16);
-    width: 80%;
-    border-radius: 15px;
-    display: none;
-}
-.iconos{
-    display: flex;
-    justify-content: space-around;
-    padding-right: 20px;
-    width: 60%;
-}
-.lupa2{
-    display: block;
-}
-.car, .start, .user, .lupa2{
-    color: #ebebeb;
-    font-size: 1.5em;
-    padding-left: 10px;
-    margin-left:20px;
-    position: relative;
-    left: 70px;
-} 
-.logo{
-padding: 10px;
-width: 50%;
-margin: 10px;
-box-shadow: 0px 0px 10px rgb(16, 16, 16);
-}
-.sin-viñetas{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    padding: 10px;
-    width: 100%;
-    justify-content: space-between;
-    text-align: center;
-    background-color: #ebebeb;
-    display: none;
-    box-shadow: 0px 0px 1px rgb(16, 16, 16);
-}
-header ul li a{
-display: flex;
-color: black;
-text-decoration: none;
-font-size: 18px;
-display: none;
-}
-.fas{
-    color: white;
-    padding: 6px;
-    border-radius: 4px;
-    margin: 0%;
-    width: 100%;
-}
-.burger-menu{
-    display: flex;
-    text-align: center;
-    display: block;
-    margin: auto;
-    font-size: 20px;
-    position: relative;
-    left: 35px;
+.link-del-logo{
+    width:35%
 }
 main{
     background-color: #ebebeb;
@@ -212,9 +130,7 @@ footer li a{
         display: block;
     
     }
-    .logo{
-        width: 30%;
-    }
+    
     .lupa2{
         display: none;
     }

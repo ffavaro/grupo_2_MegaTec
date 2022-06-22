@@ -1,48 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registarse</title>
-    <link href="/css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles-register.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Macondo&family=Roboto:wght@100;400&display=swap"
-        rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Domine&family=Macondo&family=Roboto:wght@100;400&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2da8e91210.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <link href="/css/styles-register.css" rel="stylesheet">
+        <%- include('../partials/head') %>
+    </head>
 
-<body>
-    <header>
-        <img class="logo" src="/images/MEGATEC (2).png"> </img>
-        <div class="Buscador">
-            <div class="input">Buscar productos..<i class="lupa"><i class="fa fa-search"></i></i></i></div>
-            <div class="iconos">
-                <i class="start"><i class="fa-solid fa-star"></i></i>
-                <a href="/register"> <i class="user"><i class="fa-solid fa-user-plus"></i></i></a>
-                <a href="/productDetail"> <i class="car"><i class="fa-solid fa-cart-plus"></i></i></a>
-                <i class="lupa2"><i class="fa fa-search"></i></i>
-            </div>
-        </div>
-        <ul class="sin-viñetas">
-            <li><a href="#">Productos</i></a></li>
-            <li><a href="#">Historial</i></a></li>
-            <li><a href="#">Ofertas</i></a></li>
-            <li><a href="#">Asesor</i></a></li>
-            <li><a href="#">Centro de Ayuda</i></a></li>
-        </ul>
-        <div class="burger-menu"> <i class="fas fa-bars"></i>
-        </div>
-    </header>
+    <body>
+        <%- include('../partials/header') %>
     <main>
         <form action="/newAccount" method="post" class="create-form">
             <article class="control-article">
@@ -116,17 +81,7 @@
             </div>
         </form>
     </main>
-    <footer>
-        <br>
-        <div class="facebook"><i class="fa-brands fa-facebook"></i> </div>
-        <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
-        <div class="youtube"><i class="fa-brands fa-youtube"></i></div>
-        <li class="link-footer"><a href="#">Quiénes Somos</i></a></li>
-        <li class="link-footer"><a href="#">Términos y Condiciones</i></a></li>
-        <li class="link-footer"><a href="#">Garantía y devoluciones</i></a></li>
-        <div  class="comentario"><i class="fa-solid fa-comment-dots"></i></div>
-        <strong>Copyright © 2022-2023 MegaTec S.A</strong>
-    </footer>
+    <%- include('../partials/footer')%>
 </body>
 
 </html>
