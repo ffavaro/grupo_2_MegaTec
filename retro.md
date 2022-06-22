@@ -32,4 +32,4 @@ Dejar de lado la poca cominicación durante todo el desarrollo del sprint, si no
 Implementar más reuniones entre el equipo de trabajo para mejorar la comunicación y el desarrollo de las actividades, realizar los cambios y mejoras sugeridas por lo profesores en el feedback.
 
 
-Como conclusión final, estamos trabajando bien pero necesitamos mejorar la comunicación del equipo, organizarnos mejor el tiempo de trabajo para que lleguemos a tiempo para la entrega del Sprint cumpliendo con las consigans y entregando un trabajo bien ejecutado.
+Como conclusión final, estamos trabajando bien pero necesitamos mejorar la comunicación del equipo, organizar mejor el tiempo de trabajo para que lleguemos a tiempo para la entrega del Sprint cumpliendo con las consigans y entregando un trabajo bien ejecutado.
