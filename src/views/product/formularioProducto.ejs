@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaTec</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2da8e91210.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles-formularioProducto.css">
+    <link rel="stylesheet" href="/css/styles-home.css">
+</head>
+<body>
+    <header class="bar-top">        
+        <h1><p>CARGA-EDICION PRODUCTOS</p></h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Nombre del Producto</legend>
+                <p><input type="text" name="name" id="name" ></p>
+            </fieldset>
+            <fieldset>
+                <legend>Descripción</legend>
+                <p><input type="text" name=" description" id=" description" ></p>
+            </fieldset>
+            <fieldset>
+                <legend>Precio</legend>
+                <input type="number" name="price" id="price" >
+            </fieldset>
+            <fieldset>
+                <label for="FormaDePago">Forma de Pagos</label>
+            </fieldset>
+            <div class="checkbox">
+                <label for="checkbox">Efectivo</label>
+                <input type="radio" name="MedioPago" value="Efectivo" checked>
+                <label for="checkbox">Mercadopago</label>
+                <input type="radio" name="MedioPago" value="MercadoPago">
+                <label for="checkbox">Tarjeta De Credito/Debito</label>
+                <input type="radio" name="MedioPago" value="Tarjeta De Credito/Debito">
+            </div>
+            <fieldset>
+                <p class="imagenP">imagenes productos</p>
+                <input type="file" name="image" accept=".jpg" multiple>
+            </fieldset>
+            <fieldset>
+            <legend>Categoria</legend>
+            <input type="text" name="category" id="category" >
+            </fieldset>
+            <fieldset>Descripcion Detallada</fieldset>
+            <textarea name="comentario" id="comentario" rows="5" cols="40">Datos y detalles como color,tamaño,talles,etc..</textarea>
+            <div class="reset"><input type="reset"></div>
+            <div class="enviar"><input type="submit"></div>
+        </form>
+    </main>
+    <footer>
+        <br>
+        <div class="facebook"><i class="fa-brands fa-facebook"></i> </div>
+        <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+        <div class="youtube"><i class="fa-brands fa-youtube"></i></div>
+        <li class="link-footer"><a href="#">Quiénes Somos</i></a></li>
+        <li class="link-footer"><a href="#">Términos y Condiciones</i></a></li>
+        <li class="link-footer"><a href="#">Garantía y devoluciones</i></a></li>
+        <div  class="comentario"><i class="fa-solid fa-comment-dots"></i></div>
+        <strong>Copyright © 2022-2023 MegaTec S.A</strong>
+    </footer>
+</body>
+</html>

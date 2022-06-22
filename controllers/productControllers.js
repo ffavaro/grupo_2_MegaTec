@@ -4,6 +4,9 @@ let controller = {
     },
     detail: function (req, res) {
         res.render('./product/productDetail')
+    },
+    formProduct: function (req,res) {
+        res.render('./product/formularioProducto')
     }
 }
 

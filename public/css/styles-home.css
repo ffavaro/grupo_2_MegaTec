@@ -1,7 +1,17 @@
 *{
     margin: 0 auto;
     padding: 0px;
-    box-sizing: border-box;
+    box-sizing: border-box;    
+}
+.Banner{
+    display:flex ;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 40%;
+    margin: 0px auto 0px;
+    border: solid 10px;
+
 }
 header{
     font-family:'Anton', sans-serif;;
