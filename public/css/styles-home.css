@@ -4,6 +4,12 @@
 .descripciones{
 padding-top:10px;
 }
+
+.Banner {
+    margin: 30px;
+    width: 400px;
+    height: 100%;
+}
 main{
     background-color: #ebebeb;
     width: 98%;
@@ -109,3 +115,4 @@ article{
     display: block;
 }
 }
+
