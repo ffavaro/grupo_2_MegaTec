@@ -8,15 +8,26 @@ h1 {
     display: flex;
     align-items: center;
     color: white;
+    align-content: center;
     
 }
+.Formulario{
+    background-color: #ebebeb;
+   
+}
+.Formulario-de-edicion{
 
+padding-top: 40px;
+padding-bottom: 40px;
+background-color: #ebebeb;
+   
+}
 input[type="text"],[type="number"] {
     text-align: center;
     background-color: transparent;
     width: 600px;
     padding: 8px;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     border-bottom: 2px solid gray;
 
@@ -24,8 +35,10 @@ input[type="text"],[type="number"] {
 
 fieldset {
     display: flex;
-    border: none;
+    border: solid 1px gainsboro;
     justify-content: center;
+    box-shadow: 0px 0px 1px rgb(202, 199, 199);
+    
 }
 form {
     width: 50%;
