@@ -34,5 +34,10 @@ Ya voy terminando la estructura de la vista de creación y deición de productos
 
 Como conslusión de esta reunión ya estan casi todas las actividades culminadas del 3er Sprint.
 
+## Weekly - 22 de Junio de 2022
+
+Esta reunión se baso en una retrospectiva del Sprint 3 basada en los comentarios de la .......
+
+
 
 
