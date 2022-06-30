@@ -1,10 +1,18 @@
+const path = require('path');
+const fs = require('fs');
+
+const productsFilePath = path.join(__dirname, '../src/data/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 
 let controller = {
-    index: function (req, res) {
-        res.render('./product/productCart')
+    index: function (req,res) {
+        let listProduct = products;
+        res.render('home', {listProduct});
     },
     detail: function (req, res) {
-        res.render('./product/productDetail')
+        let product = products.find(x => x.id == req.params.id);
+        res.render('./product/productDetail', {product})
     },
     create: function (req,res) {
         res.render('./product/formularioProducto')
@@ -23,6 +31,9 @@ let controller = {
             products.push(newProduct);
             let jsonProduct = JSON.stringify(products);
             fs.writeFileSync(productsFilePath, jsonProduct);
+    },
+    productCart: (req, res) =>{
+        res.render('./product/productCart')
     }
 }
 

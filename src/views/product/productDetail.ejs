@@ -4,17 +4,15 @@
 <head>
     <%- include('../partials/head')%>
     <link href="/css/styles-productDetail.css" rel="stylesheet">
-    
 </head>
-
     <body>
         <%- include('../partials/header')%>
     <main>
         <section>
             <article>
                 <div class="product">
-                    <h3 class="descripciones"> Procesador AMD RYZEN 3 3200G </h3>
-                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
+                    <h3 class="descripciones"> <%= product.name %> </h3>
+                    <img src="/images/<%= product.image %> " alt="<%= product.name %> "> </img>
                 </div>
                 <h2>Productos Similares</h2>
                 <div class="other-produc">                    
@@ -52,8 +50,10 @@
                     </ul>
                     <br>
                     <h2>Precio</h2>
-                    <p class="precios">$630,000 COP*</p>
-                    <p class="descuentos"> 20% off </p>
+                    <div class="camion"><i class="fa-solid fa-basket-shopping"></i></div>
+                    <p class="precios">$<%= product.price%></p>
+                    <p class="descuentos"> <%= product.discount%> %</p>
+                    <h3 class="descripciones"> <%= product.description%></h3>
                 </div>
             </article>
         </section>
