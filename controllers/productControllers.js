@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const productsFilePath = path.join(__dirname, '../src/data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); // Convierte el JSON en un array de objetos literales
 
 
 let controller = {
@@ -18,7 +18,6 @@ let controller = {
         res.render('./product/formularioProducto')
     },
     store: function ( req,res) {
-
             let newProduct = {
                 id: req.body.id,
                 name: req.body.name,
@@ -30,7 +29,8 @@ let controller = {
 
             products.push(newProduct);
             let jsonProduct = JSON.stringify(products);
-            fs.writeFileSync(productsFilePath, jsonProduct);
+            fs.writeFileSync(productsFilePath, jsonProduct);//Reemplaza el archivo JSON anterior por el nuevo producto
+            res.render ('/home');
     },
     productCart: (req, res) =>{
         res.render('./product/productCart')
