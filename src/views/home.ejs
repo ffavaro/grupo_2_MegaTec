@@ -12,7 +12,7 @@
                 <section>
                     <h2> Ofertas </h2>
                     <% for( product of listProduct) { %>
-                        <% if(product.category == 'visited') { %>
+                        <% if(product.category == 'in-offer') { %>
                             <article>
                                 <a href="/product/<%= product.id%>">
                                     <img width="100%" src="images/<%= product.image%>" alt="IMAGEN AMD RYZEN 3"> </img>
@@ -28,7 +28,7 @@
                     <% } %>
                     <h2> Nuevos Productos </h2>
                     <% for( product of listProduct) { %>
-                        <% if(product.category == 'in-sale') { %>
+                        <% if(product.category == 'new-product') { %>
                             <article>
                                 <a href="/product/<%= product.id%>">
                                     <img width="100%" src="images/<%= product.image%>" alt="IMAGEN AMD RYZEN 3"> </img>

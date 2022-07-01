@@ -2,13 +2,14 @@
     margin: 0 auto;
     padding: 0px;
     box-sizing: border-box;
-    font-family:'Anton', sans-serif;;
+    font-family: 'Oxygen', sans-serif;;
 }
 
 header {
     font-family: 'Anton', sans-serif;
     font-size: 18px;
-    background-image: url(/images/Fondo.jpeg);
+    /* background-image: url(/images/Fondo.jpeg); */
+    background:  #161D25;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -49,7 +50,7 @@ header {
 .start,
 .user,
 .lupa2 {
-    color: #ebebeb;
+    color: #72DA38;
     font-size: 1.5em;
     padding-left: 10px;
 
