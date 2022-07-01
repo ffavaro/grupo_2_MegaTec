@@ -14,75 +14,36 @@
                     <h3 class="descripciones"> <%= product.name %> </h3>
                     <img src="/images/<%= product.image %> " alt="<%= product.name %> "> </img>
                 </div>
-                <h2>Productos Similares</h2>
-                <div class="other-produc">                    
-                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
-                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
-                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
-                </div>
             </article>
         </section>
         <section>
             <article>
                 <div>
                     <h2>Especificaciones</h2>
-                    <ul>
-                        <li>N.° de núcleos de CPU: 4</li>
-                        <li>N.° de subprocesos: 4</li>
-                        <li>N.° de núcleos de GPU: 8</li>
-                        <li>Reloj base: 3.6GHz</li>
-                        <li>Reloj de aumento Max: 4GHz</li>
-                        <li>Caché L1 total: 384KB</li>
-                        <li>Caché L2 total: 2MB</li>
-                        <li>Caché L3 total:4MB</li>
-                        <li>Desbloqueados: Sí</li>
-                        <li>CMOS: 12nm FinFET</li>
-                        <li>Paquete: AM4</li>
-                        <li>Versión de PCI Express: PCIe 3.0 x8</li>
-                        <li>TDP/TDP predeterminado: 65W cTDP: 45-65W</li>
-                        <li>Temp. Máx: 95°C</li>
-                        <li>Velocidad máxima de memoria: 2933MHz</li>
-                        <li>Tipo de memoria: DDR4</li>
-                        <li>Canales de memoria: 2</li>
-                        <li>Frecuencia de gráficos: 1250 MHz</li>
-                        <li>Modelo de gráficos: Radeon™ Vega 8 Graphics</li>
-                        <li>Número de núcleos de los gráficos: 8</li>
-                    </ul>
+                    <h3 class="descripciones"> <%= product.description%></h3>
                     <br>
                     <h2>Precio</h2>
-                    <div class="camion"><i class="fa-solid fa-basket-shopping"></i></div>
                     <p class="precios">$<%= product.price%></p>
-                    <p class="descuentos"> <%= product.discount%> %</p>
-                    <h3 class="descripciones"> <%= product.description%></h3>
+                    <p class="descuentos"> Descuento <%= product.discount%> %</p>
                 </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <div>
-                    <h2>Envios</h2>
-                    <select name="select_" id="">
-                        <option value="1">Express</option>
-                        <option value="2">Normal y gratis</option>
-                        <option value="3">Normal</option>
-                    </select>
-                    <h2>Stock disponible</h2>
-                    <span>Cantidad:10</span>
-
-                    <h2>Colores</h2>
-                    <span>Negro</span>
-                    <br>
-                    <h2>Vendedor</h2>
-                    <span>Juan Gomez</span>
-                    <h2>Ubicación</h2>
-                    <span> Balvanera, Capital Federal </span>
-                    <h2>Descripciones</h2>
-                    <span>
-                        ¡Es uno de los mejores del sitio!
-                    </span>
+                <div class="buttons">
                     <button class="button-save">
                         Comprar
                     </button>
+                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="button-edit">Editar</button>
+                    </form>
+                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="button-delete">ELIMINAR</button>
+                    </form>
+                </div>
+            </article>
+            <article>
+                <h2>Productos Similares</h2>
+                <div class="other-produc">                    
+                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
+                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
+                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
                 </div>
             </article>
         </section>
