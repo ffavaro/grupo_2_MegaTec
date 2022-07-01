@@ -21,7 +21,7 @@ router.post('/products',productControllers.store)
 
 
 /*Product delete */
-router.delete('/:id', productControllers.delete);
+
 
 
 module.exports = router;
