@@ -32,12 +32,16 @@ Agregue a todas las vistas los archivos parciales de manera que no se cruzarán 
 ### Matias
 Ya voy terminando la estructura de la vista de creación y deición de productos me queda agragarle los estilos y queda terminanda.
 
-Como conslusión de esta reunión ya estan casi todas las actividades culminadas del 3er Sprint.
+Como conclusión de esta reunión ya estan casi todas las actividades culminadas del 3er Sprint.
 
 ## Weekly - 22 de Junio de 2022
 
-Esta reunión se baso en una retrospectiva del Sprint 3 basada en los comentarios de la .......
+Esta reunión se baso en analizar el Sprint 4, se realizó la primera actvidad del Sprint que fue actualizar el tablero de trello, en el cual definimos cada actividad, las especificaciones y entregables correspondientes y posteriormente las dividimos entre los integrates del grupo.
+Se estableció una proxima reunión para el lunes 27 de Junio.
 
+## Weekly - 27 de Junio de 2022
+
+Esta reunión se realizó dentro de la clase en vivo, en la cuaal trabajamos sobre un proyecto de clase implementando CRUD. En este espacio compartimos dudas sobre este tema y Francisco al tener más claros los conocimientos orientó al equipo sobre la correcta implemnetación de CRUD en un proyecto.
 
 
 
