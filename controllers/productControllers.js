@@ -12,12 +12,12 @@ let controller = {
     let listProduct = products;
     res.render("home", { listProduct });
   },
+  create: function (req, res) {
+    res.render("./product/formularioProducto");
+  },
   detail: function (req, res) {
     let product = products.find((x) => x.id == req.params.id);
     res.render("./product/productDetail", { product });
-  },
-  create: function (req, res) {
-    res.render("./product/formularioProducto");
   },
   store: function (req, res) {
     let newProduct = {
