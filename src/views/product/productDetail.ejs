@@ -30,20 +30,17 @@
                     <button class="button-save">
                         Comprar
                     </button>
-                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="button-edit">Editar</button>
-                    </form>
-                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                    <form  method="post" action="/product/delete/<%= product.id %>?_method=DELETE">
                         <button type="submit" class="button-delete">ELIMINAR</button>
                     </form>
                 </div>
             </article>
             <article>
-                <h2>Productos Similares</h2>
-                <div class="other-produc">                    
-                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
-                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
-                    <img src="/images/AMD RYZEN 3 3200G.jpg" alt="IMAGEN AMD RYZEN 3"> </img>
+                <h2>Productos Nuevo</h2>
+                <div class="other-produc">
+                    <% for( productNew of listProduct) { %>   
+                            <img src="/images/<%=productNew.image%>" alt="<%= productNew.name %>"></img>           
+                    <% } %>
                 </div>
             </article>
         </section>
