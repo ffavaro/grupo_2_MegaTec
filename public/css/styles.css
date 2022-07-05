@@ -2,11 +2,11 @@
     margin: 0 auto;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Oxygen', sans-serif;;
+     font-family: 'Oxygen', sans-serif 
 }
 
 header {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Anton', sans-serif; 
     font-size: 18px;
     /* background-image: url(/images/Fondo.jpeg); */
     background:  #161D25;

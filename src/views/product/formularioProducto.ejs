@@ -5,9 +5,13 @@
 </head>
 <body>
     <%- include('../partials/header') %>       
-        <h1><p>CARGA-EDICIóN DE PRODUCTOS</p></h1>
     <main class="Formulario">
-        <form class="Formulario-de-edicion">
+        <form method="post" accion="/product/products"  class="Formulario-de-edicion">
+                <h1><p>CARGA-EDICIÓN DE PRODUCTOS</p></h1>
+            <fieldset>
+                <legend>Id del Producto</legend>
+                <p><input type="text" name="id" id="id" ></p>
+            </fieldset>
             <fieldset>
                 <legend>Nombre del Producto</legend>
                 <p><input type="text" name="name" id="name" ></p>
@@ -21,28 +25,37 @@
                 <input type="number" name="price" id="price" >
             </fieldset>
             <fieldset>
-                <label for="FormaDePago">Forma de Pagos</label>
+                <legend>Descuento</legend>
+                <input type="number" name="discount" id="discount" >
             </fieldset>
-            <div class="checkbox">
+            <fieldset>
+                <legend>Categoría</legend>
+                <input type="text" name="category" id="category" >
+                </fieldset>
+            <!-- <fieldset>
+                <label for="FormaDePago">Forma de Pagos</label>
+            </fieldset> -->
+            <!-- <div class="checkbox">
                 <label for="checkbox">Efectivo</label>
                 <input type="radio" name="MedioPago" value="Efectivo" checked>
                 <label for="checkbox">Mercadopago</label>
                 <input type="radio" name="MedioPago" value="MercadoPago">
                 <label for="checkbox">Tarjeta De Credito/Debito</label>
                 <input type="radio" name="MedioPago" value="Tarjeta De Credito/Debito">
-            </div>
+            </div> -->
             <fieldset>
-                <p class="imagenP">imagenes productos</p>
+                <!-- <p class="imagenP">imagenes productos</p> -->
+                <legend>Imagen del Producto</legend>
                 <input type="file" name="image" accept=".jpg" multiple>
             </fieldset>
-            <fieldset>
-            <legend>Categoria</legend>
-            <input type="text" name="category" id="category" >
-            </fieldset>
-            <fieldset>Descripcion Detallada</fieldset>
-            <textarea name="comentario" id="comentario" rows="5" cols="40">Datos y detalles como color,tamaño,talles,etc..</textarea>
+            
+            
+            <!-- <fieldset>Descripcion Detallada</fieldset>
+            <textarea name="comentario" id="comentario" rows="5" cols="40">Datos y detalles como color,tamaño,talles,etc..</textarea> -->
+            <div class="botones">
             <div class="reset"><input type="reset"></div>
             <div class="enviar"><input type="submit"></div>
+        </div>
         </form>
     </main>
     <%- include('../partials/footer')%>

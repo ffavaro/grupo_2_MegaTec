@@ -32,7 +32,7 @@ let controller = {
     products.push(newProduct);
     let jsonProduct = JSON.stringify(products);
     fs.writeFileSync(productsFilePath, jsonProduct); //Reemplaza el archivo JSON anterior por el nuevo producto
-    res.render("/home");
+    res.redirect('home');
   },
   productCart: (req, res) => {
     res.render("./product/productCart");

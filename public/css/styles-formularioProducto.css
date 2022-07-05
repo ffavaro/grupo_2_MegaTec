@@ -11,20 +11,25 @@ h1 {
     align-content: center;
     
 }
-.Formulario{
+ .Formulario{
     background-color: #ebebeb;
    
-}
+} 
 .Formulario-de-edicion{
-
-padding-top: 40px;
-padding-bottom: 40px;
-background-color: #ebebeb;
+width: 50%;
+/* background-color: white; */
+padding: 1em;
    
+}
+p{
+    padding-top: 15px;
+    color: #1C2833;
+    font-weight: bold;
+
 }
 input[type="text"],[type="number"] {
     text-align: center;
-    background-color: transparent;
+    background-color: white;
     width: 600px;
     padding: 8px;
     font-size: 18px;
@@ -32,6 +37,25 @@ input[type="text"],[type="number"] {
     border-bottom: 2px solid gray;
 
 }
+input[type="file"] {
+padding-bottom: 15px;
+padding-top: 15px;
+}
+legend {
+    font-weight: bold;
+    font-size: 20px;
+}
+input{
+    background-color: #ebebeb;
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 
 fieldset {
     display: flex;
@@ -78,9 +102,9 @@ textarea {
     background-color: rgba(147, 180, 217, 0.612);
 }
 
-body {
+/* body {
     background-color: rgb(0, 0, 96)
-}
+} */
 
 
 .enviar {
