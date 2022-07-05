@@ -33,3 +33,19 @@ Implementar más reuniones entre el equipo de trabajo para mejorar la comunicaci
 
 
 Como conclusión final, estamos trabajando bien pero necesitamos mejorar la comunicación del equipo, organizar mejor el tiempo de trabajo para que lleguemos a tiempo para la entrega del Sprint cumpliendo con las consigans y entregando un trabajo bien ejecutado.
+
+# Sprint 3
+## Breve retrospectiva
+Culminamos con éxito el Sprint #3, y realizamos una retrospectiva basada en la Estrella de Mar llegamos a las siguientes conclusiones:
+### Seguir haciendo:
+LLegar con éxito a cada Sprint, cumpliendo con todas las actividades y manteniendo el apoyo y la responsabilidad en el equipo.
+### Menos de:
+Dejar actividades del Sprint para ultima hora, es mejor trabajar poco a poco y llegar a tiempo para que todo salga bien.
+### Más de:
+Seguir mejorando la comunicación, hemos tenido un cambio positivo en ese aspectó ya que ahora mantemos un comunicación mas fluida y continua a lo largo de los Sprint pero podemos seguir mejorando.
+### Dejar de hacer:
+No dejar actividades importantes del Sprint para un dia o dos antes del Sprint, ya que eso nos hace correr para alcanzar a llegar al Sprint y puede perjudicar los resultados.
+### Empezar hacer:
+Continuar mejorando la comunicación entre los integrantes del equipo y ser más responsables con las actividades que a cada integrante del equipo le corresponde.
+
+Como conclusión final, estamos trabajando bien pero necesitamos mejorar la comunicación del equipo y el compromiso de cada integrante con las entregas.
