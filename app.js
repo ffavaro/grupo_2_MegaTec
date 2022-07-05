@@ -7,6 +7,7 @@ const app = express();
 const main = require("./routers/main");
 const product = require("./routers/product");
 const users = require("./routers/user");
+
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static("./public"));
@@ -14,10 +15,7 @@ app.use(express.static("./public"));
 // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(methodOverride("_method"));
 
-app.listen(3000, (req, res) => {
-    console.log("Server on");
-});
-
+//Views
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
@@ -25,3 +23,9 @@ app.set('views', './src/views');
 app.use("/", main);
 app.use("/user", users);
 app.use("/product", product);
+
+//Listen port
+app.listen(3000, (req, res) => {
+    console.log("Server on");
+});
+
