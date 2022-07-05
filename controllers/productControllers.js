@@ -16,8 +16,14 @@ let controller = {
     res.render("./product/formularioProducto");
   },
   detail: function (req, res) {
+    /**
+     * Filtro por el producto seleccionado
+     * Y envio un listado de los productos en oferta
+     */
     let product = products.find((x) => x.id == req.params.id);
-    res.render("./product/productDetail", { product });
+    let listProduct = products.filter((x) =>  x.category === "new-product");
+
+    res.render("./product/productDetail", { product, listProduct });
   },
   store: function (req, res) {
     let newProduct = {
@@ -38,7 +44,7 @@ let controller = {
     res.render("./product/productCart");
   },
   delete: (req, res) => {
-    let arrayProduct = products.filter((x) => x.id === req.params.id);
+    let arrayProduct = products.filter((x) => x.id !== req.params.id);
     fs.writeFileSync(productsFilePath, JSON.stringify(arrayProduct)); //Reemplaza el archivo JSON anterior por el nuevo producto
     let listProduct = products;
     res.render("home", { listProduct });

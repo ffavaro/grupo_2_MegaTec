@@ -21,10 +21,8 @@ router.get('/:id', productControllers.detail);
 /*Product edit */
 //falta el put y el get
 
-
 /*Product delete */
-
-
+router.delete('/delete/:id', productControllers.delete);
 
 module.exports = router;
 
