@@ -2,21 +2,19 @@ const express = require('express');
 const router = express.Router();
 const productControllers = require('../controllers/productControllers');
 
-
 /*Get list product */
 router.get('/', productControllers.index);
 
 /*Product detail */
-router.post('/creacion',function(req,res){
-   res.send('esto es un post') 
-})
-router.post('/products', productControllers.store)
-router.get('/create', productControllers.create);
+/*router.get('/:id', productControllers.detail);
+*/
+/**Product Cart */
 router.get('/productCart', productControllers.productCart);
-router.get('/:id', productControllers.detail);
 
 // Creación de productos GET y envío de información POST
 // La ruta completa es /product/create, porque en app.js ya está este prefijo
+router.post('/product/products', productControllers.store)
+router.get('/create', productControllers.create);
 
 /*Product edit */
 //falta el put y el get
