@@ -42,7 +42,7 @@ LLegar con éxito a cada Sprint, cumpliendo con todas las actividades y mantenie
 ### Menos de:
 Dejar actividades del Sprint para ultima hora, es mejor trabajar poco a poco y llegar a tiempo para que todo salga bien.
 ### Más de:
-Seguir mejorando la comunicación, hemos tenido un cambio positivo en ese aspectó ya que ahora mantemos un comunicación mas fluida y continua a lo largo de los Sprint pero podemos seguri mejorando.
+Seguir mejorando la comunicación, hemos tenido un cambio positivo en ese aspectó ya que ahora mantemos un comunicación mas fluida y continua a lo largo de los Sprint pero podemos seguir mejorando.
 ### Dejar de hacer:
 No dejar actividades importantes del Sprint para un dia o dos antes del Sprint, ya que eso nos hace correr para alcanzar a llegar al Sprint y puede perjudicar los resultados.
 ### Empezar hacer:
