@@ -33,6 +33,9 @@
                     <form  method="post" action="/product/delete/<%= product.id %>?_method=DELETE">
                         <button type="submit" class="button-delete">ELIMINAR</button>
                     </form>
+                    <form  method="get" action="/product/edit/<%= product.id %>">
+                        <button type="submit" class="button-delete">Editar</button>
+                    </form>
                 </div>
             </article>
             <article>

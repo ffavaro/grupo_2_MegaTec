@@ -6,8 +6,8 @@ const productControllers = require('../controllers/productControllers');
 router.get('/', productControllers.index);
 
 /*Product detail */
-/*router.get('/:id', productControllers.detail);
-*/
+router.get('/detail/:id', productControllers.detail);
+
 /**Product Cart */
 router.get('/productCart', productControllers.productCart);
 
@@ -18,6 +18,8 @@ router.get('/create', productControllers.create);
 
 /*Product edit */
 //falta el put y el get
+router.get('/edit/:id', productControllers.edit);
+router.post('/edit/:id', productControllers.update);
 
 /*Product delete */
 router.delete('/delete/:id', productControllers.delete);

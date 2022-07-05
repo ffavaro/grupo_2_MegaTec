@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/styles-formularioProducto.css">
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+        <main class="Formulario">
+            <form method="POST" accion="/product/edit/<%= product.id %>?_method=PUT" class="Formulario-de-edicion">
+                <h1>
+                    <p>EDICIÓN DE PRODUCTOS</p>
+                </h1>
+                <fieldset>
+                    <legend>Nombre del Producto</legend>
+                    <p><input type="text" name="name" id="name" value="<%= product.name %>"></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Descripción</legend>
+                    <p><input type="text" name="description" id="description" value="<%= product.description %>"></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Precio</legend>
+                    <input type="number" name="price" id="price" value="<%= product.price %>">
+                </fieldset>
+                <fieldset>
+                    <legend>Descuento</legend>
+                    <input type="number" name="discount" id="discount" value="<%= product.discount %>">
+                </fieldset>
+                <fieldset>
+                    <legend>Categoría</legend>
+                    <input type="text" name="category" id="category" value="<%= product.category %>">
+                </fieldset>
+                <fieldset>
+                    <legend>Imagen del Producto</legend>
+                    <img src="/images/<%= product.image %> " alt="<%= product.name %> "> </img>
+                    <input type="file" name="image" accept=".jpg" multiple>
+                </fieldset>
+                <div class="botones">
+                    <div class="reset">
+                        <button type="reset">Limpiar</button>
+                    </div>
+                    <div class="enviar">
+                        <button type="submit">Actualizar</button> 
+                    </div>
+                </div>
+            </form>
+        </main>
+        <%- include('../partials/footer')%>
+</body>
+
+</html>

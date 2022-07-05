@@ -49,6 +49,28 @@ let controller = {
     let listProduct = products;
     res.render("home", { listProduct });
   },
+  edit: (req, res) =>{
+    let product = products.find((x) => x.id == req.params.id);
+    res.render("./product/edit", { product });
+  },
+  update: (req, res) => {
+    let product = products.find((x) => x.id == req.params.id);
+    let index = products.indexOf((x) => x.id == req.params.id);
+
+    product.name = req.body.name;
+    product.description = req.body.description;
+    product.price = req.body.price;
+    product.discount = req.body.discount;
+    product.category = req.body.category;
+    
+    products[index] = product;
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(products)); //Reemplaza el archivo JSON anterior por el nuevo producto
+    let listProduct = products;
+    res.render("home", { listProduct });
+    res.send("esto es update");
+  }
+
 };
 
 module.exports = controller;
