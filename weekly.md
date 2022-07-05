@@ -6,6 +6,8 @@ Nuestro equipo de trabajo maneja de 2 a 3 reuniones semanales para hacer un pequ
 ● Si se encontró con algún impedimento.
 ● Qué va a hacer hoy?
 
+# SPRINT 3
+
 ## Weekly - 13 de Junio de 2022
 
 En esta reunión se realizó una breve retrospectiva del Sprint anterior teninedo en cuenta las opiniones de cada integrante respecto a los resultados obtenidos y a las recomendaciones dadas por los docentes en el feedback.
@@ -34,14 +36,38 @@ Ya voy terminando la estructura de la vista de creación y deición de productos
 
 Como conclusión de esta reunión ya estan casi todas las actividades culminadas del 3er Sprint.
 
+# SPRINT 4
+
 ## Weekly - 22 de Junio de 2022
 
-Esta reunión se baso en analizar el Sprint 4, se realizó la primera actvidad del Sprint que fue actualizar el tablero de trello, en el cual definimos cada actividad, las especificaciones y entregables correspondientes y posteriormente las dividimos entre los integrates del grupo.
+Esta reunión se baso en analizar y planificar el Sprint 4, se realizó la primera actvidad del Sprint que fue actualizar el tablero de trello, en el cual definimos cada actividad, las especificaciones y entregables correspondientes, posteriormente dividimos estas actividades  entre los integrates del grupo.
 Se estableció una proxima reunión para el lunes 27 de Junio.
 
 ## Weekly - 27 de Junio de 2022
 
-Esta reunión se realizó dentro de la clase en vivo, en la cuaal trabajamos sobre un proyecto de clase implementando CRUD. En este espacio compartimos dudas sobre este tema y Francisco al tener más claros los conocimientos orientó al equipo sobre la correcta implemnetación de CRUD en un proyecto.
+Esta reunión se realizó dentro de la clase en vivo, en la cuaal trabajamos sobre un proyecto de clase implementando CRUD. En este espacio compartimos dudas sobre este tema y  Francisco al tener más claros los conocimientos orientó al equipo sobre la correcta implemnetación de CRUD en un proyecto, de igual forma recibimos orientación de parte de los profesores.
+
+## Weekly - 01 de Julio de 2022
+
+Esta reunión fue de de imprevisto, convocada por Clara ya que tenia problemas con unas vistas que no estaban visualizando porque no estaba entrando a la ruta correspondiente. Para esto junto con Francisco revisaron el proyecto y se dieron cuenta que debían cambiar el orden las rutas para no tener este problema.
+
+## Weekly - 04 de Julio
+
+Para esta reunión se manejaron dos momentos, uno fue dentro de la clase en vivo donde cada integrante comunicó al equipo sus comentarios y sugerencias referente a las actividades que viene trabajando:
+
+### Francisco
+Realicé con éxito las actividades que me correspondían.
+
+### Matias
+No he continuado trabajando en mis actividades, pero espero hoy seguir trabajando
+
+### Clara
+Tengo un inconveniente con el formulario de crear productos ya que al completar la información del fomulario y al enviarla me aparece en pantalla el error "Cannot POST /product/create", Ya revise que las routas, el controlador y el formualrio y no encuentro el error.
+
+Junto con el profesor revisamos el error que tiene Clara en dicho formulario y no encontramos cual puede ser la causa, ya que a simple vista todo el código parace estar correcto, se nos recomendo empezar a borrar ciertas lineas para ir desglosando el código y encontrar que esta causando el error.
+
+El otro momento de la reunión fue al terminar la clase, realizamos otra reuníon para seguir revisando el error que presenta el proyecto, no encontramos la solución pero nos comprometimos a seguir investigando y de ser necesario preguntarle a los compañeros por slack para ver si a ellos se les ha presentado el mismo error.
+
 
 
 
