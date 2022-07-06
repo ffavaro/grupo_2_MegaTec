@@ -20,6 +20,7 @@ let controller = {
       price: req.body.price,
       discount: req.body.discount,
       category: req.body.category,
+      image: req.body.image
     };
 
     products.push(newProduct);

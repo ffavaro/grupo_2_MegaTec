@@ -8,8 +8,8 @@
 header {
     font-family: 'Anton', sans-serif; 
     font-size: 18px;
-    /* background-image: url(/images/Fondo.jpeg); */
-    background:  #161D25;
+    background-image: url(/images/Fondo.jpeg);
+    /* background:  #161D25; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -50,7 +50,7 @@ header {
 .start,
 .user,
 .lupa2 {
-    color: #72DA38;
+    color: white;
     font-size: 1.5em;
     padding-left: 10px;
 

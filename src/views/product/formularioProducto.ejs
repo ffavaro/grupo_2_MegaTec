@@ -6,7 +6,7 @@
 <body>
     <%- include('../partials/header') %>       
     <main class="Formulario">
-        <form method="POST" accion="/product/create" enctype="multipart/form-data" class="Formulario-de-edicion">
+        <form accion="/product/create" enctype="multipart/form-data" method="POST"  class="Formulario-de-edicion" x>
                 <h1><p>CARGA-EDICIÓN DE PRODUCTOS</p></h1>
             <fieldset>
                 <legend>Id del Producto</legend>
@@ -34,7 +34,7 @@
                 </fieldset>
             <fieldset>
                  <legend>Imagen del Producto</legend>
-                <input type="file" name="image" accept=".jpg" multiple>
+                <input type="file" name="image" id="image">
             </fieldset>
             <div class="botones">
                 <div class="reset"><input type="reset"></div>
