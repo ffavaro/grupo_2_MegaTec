@@ -23,6 +23,9 @@ app.set('views', './src/views');
 app.use("/", main);
 app.use("/user", users);
 app.use("/product", product);
+app.use((req,res, next) =>{
+    res.status(404).render("not-found")
+})
 
 //Listen port
 app.listen(3000, (req, res) => {
