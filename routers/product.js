@@ -18,8 +18,10 @@ const uploadFile = multer({ storage: multerDiskStorage })
 /*Get list product */
 router.get('/', productControllers.index);
 
+/*Product detail */
+router.get('/detail/:id', productControllers.detail);
+
 /**Product Cart */
-router.get('/productCart', productControllers.productCart);
 router.get('/productCart', productControllers.productCart);
 
 // Creación de productos GET y envío de información POST
@@ -28,10 +30,12 @@ router.get('/create', productControllers.create);
 router.post('/create', uploadFile.single('image'), productControllers.store);
 
 /*Product detail */
- router.get('/:id', productControllers.detail);
+router.get('/:id', productControllers.detail);
 
 /*Product edit */
 //falta el put y el get
+router.get('/edit/:id', productControllers.edit);
+router.post('/edit/:id', productControllers.update);
 
 
 module.exports = router;
