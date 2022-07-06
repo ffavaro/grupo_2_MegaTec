@@ -17,8 +17,10 @@ h1 {
 } 
 .Formulario-de-edicion{
 width: 50%;
-/* background-color: white; */
+background-color: #D4E6F1; 
 padding: 1em;
+margin-top: 25px;
+margin-bottom: 25px;
    
 }
 p{
@@ -35,11 +37,15 @@ input[type="text"],[type="number"] {
     font-size: 18px;
     border: none;
     border-bottom: 2px solid gray;
-
 }
+
 input[type="file"] {
 padding-bottom: 15px;
 padding-top: 15px;
+background-color: white;
+margin:auto;
+width: 600px;
+text-align: center;
 }
 legend {
     font-weight: bold;
@@ -51,9 +57,9 @@ input{
 
 .botones{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 10px;
 }
 
 
@@ -102,16 +108,19 @@ textarea {
     background-color: rgba(147, 180, 217, 0.612);
 }
 
-/* body {
-    background-color: rgb(0, 0, 96)
-} */
+ body {
+    background-color:#ebebeb
+} 
 
-
-.enviar {
-    display: inline-block;
+input[type="reset"], input[type="submit"]{
+    background-color: #3483fa ;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: bold;
 }
 
-.reset {
-    display: inline-block;
-    margin: 10px;
+.enviar, .reset {
+margin: 0%;
 }
