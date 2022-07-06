@@ -45,11 +45,11 @@ Se estableció una proxima reunión para el lunes 27 de Junio.
 
 ## Weekly - 27 de Junio de 2022
 
-Esta reunión se realizó dentro de la clase en vivo, en la cuaal trabajamos sobre un proyecto de clase implementando CRUD. En este espacio compartimos dudas sobre este tema y  Francisco al tener más claros los conocimientos orientó al equipo sobre la correcta implemnetación de CRUD en un proyecto, de igual forma recibimos orientación de parte de los profesores.
+Esta reunión se realizó dentro de la clase en vivo, en la cual trabajamos sobre un proyecto de clase implementando CRUD. En este espacio compartimos dudas sobre este tema y  Francisco al tener más claros los conocimientos orientó al equipo sobre la correcta implementación de CRUD en un proyecto, de igual forma recibimos orientación de parte de los profesores.
 
 ## Weekly - 01 de Julio de 2022
 
-Esta reunión fue de de imprevisto, convocada por Clara ya que tenia problemas con unas vistas que no estaban visualizando porque no estaba entrando a la ruta correspondiente. Para esto junto con Francisco revisaron el proyecto y se dieron cuenta que debían cambiar el orden las rutas para no tener este problema.
+Esta reunión fue de de imprevisto, convocada por Clara ya que tenia problemas con unas vistas que no se estaban visualizando porque no estaba entrando a la ruta correspondiente. Para esto junto con Francisco revisaron el proyecto y se dieron cuenta que debían cambiar el orden las rutas para no tener este problema.
 
 ## Weekly - 04 de Julio
 
@@ -62,7 +62,7 @@ Realicé con éxito las actividades que me correspondían.
 No he continuado trabajando en mis actividades, pero espero hoy seguir trabajando
 
 ### Clara
-Tengo un inconveniente con el formulario de crear productos ya que al completar la información del fomulario y al enviarla me aparece en pantalla el error "Cannot POST /product/create", Ya revise que las routas, el controlador y el formualrio y no encuentro el error.
+Ya estoy a punto de culminar mis actividades pero tengo un inconveniente con el formulario de crear productos ya que al completar la información del fomulario y al enviarla me aparece en pantalla el error "Cannot POST /product/create", Ya revise que las rutas, el controlador y el formualrio y no encuentro el error.
 
 Junto con el profesor revisamos el error que tiene Clara en dicho formulario y no encontramos cual puede ser la causa, ya que a simple vista todo el código parace estar correcto, se nos recomendo empezar a borrar ciertas lineas para ir desglosando el código y encontrar que esta causando el error.
 

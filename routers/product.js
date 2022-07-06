@@ -1,40 +1,38 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path')
 const productControllers = require('../controllers/productControllers');
+const multer =require('multer');
+const multerDiskStorage = multer.diskStorage({
+    destination: function(req,file,callback){
+        let folder = path.join(__dirname,'../public/images');
+        callback(null,folder)
+    },
+    filename : function(req,file,callback){
+        let imagenName = Date.now() + path.extname(file.originalname);
+        callback;(null,imagenName);
+    }
+})
+const uploadFile = multer({ storage: multerDiskStorage })
 
 /*Get list product */
 router.get('/', productControllers.index);
 
-/*Product detail */
-<<<<<<< HEAD
-router.post('/creacion',function(req,res){
-   res.send('esto es un post') 
-})
-
-router.post('/products', productControllers.store)
-router.get('/create', productControllers.create);
-router.get('/:id', productControllers.detail);
-=======
-/*router.get('/:id', productControllers.detail);
-*/
 /**Product Cart */
 router.get('/productCart', productControllers.productCart);
->>>>>>> 66df6db59de0348178cda76dd00905a83a649cc4
-
 router.get('/productCart', productControllers.productCart);
-
-
 
 // Creación de productos GET y envío de información POST
 // La ruta completa es /product/create, porque en app.js ya está este prefijo
-router.post('/product/products', productControllers.store)
 router.get('/create', productControllers.create);
+router.post('/create', uploadFile.single('image'), productControllers.store);
+
+/*Product detail */
+ router.get('/:id', productControllers.detail);
 
 /*Product edit */
 //falta el put y el get
 
-/*Product delete */
-router.delete('/delete/:id', productControllers.delete);
 
 module.exports = router;
 

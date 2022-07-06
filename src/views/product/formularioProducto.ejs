@@ -6,31 +6,31 @@
 <body>
     <%- include('../partials/header') %>       
     <main class="Formulario">
-        <form method="POST" accion="/product/products" class="Formulario-de-edicion">
+        <form method="POST" accion="/product/create" enctype="multipart/form-data" class="Formulario-de-edicion">
                 <h1><p>CARGA-EDICIÓN DE PRODUCTOS</p></h1>
             <fieldset>
                 <legend>Id del Producto</legend>
-                <p><input type="text" name="id" id="id" ></p>
+                <p><input type="text" name="id" id="id" placeholder="Ejm: 15, 16.." ></p>
             </fieldset>
             <fieldset>
                 <legend>Nombre del Producto</legend>
-                <p><input type="text" name="name" id="name" ></p>
+                <p><input type="text" name="name" id="name" placeholder="Procesador Intel Core i5"></p>
             </fieldset>
             <fieldset>
                 <legend>Descripción</legend>
-                <p><input type="text" name=" description" id=" description" ></p>
+                <p><input type="text" name=" description" id=" description" placeholder="Este procesador ofrece más espacio en caché y la arquitectura ...." ></p>
             </fieldset>
             <fieldset>
                 <legend>Precio</legend>
-                <input type="number" name="price" id="price" >
+                <input type="number" name="price" id="price" placeholder="1499000" >
             </fieldset>
             <fieldset>
                 <legend>Descuento</legend>
-                <input type="number" name="discount" id="discount" >
+                <input type="number" name="discount" id="discount" placeholder="10" >
             </fieldset>
             <fieldset>
                 <legend>Categoría</legend>
-                <input type="text" name="category" id="category" >
+                <input type="text" name="category" id="category" placeholder=in-offer/new-product>
                 </fieldset>
             <fieldset>
                  <legend>Imagen del Producto</legend>

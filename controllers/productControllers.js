@@ -25,7 +25,7 @@ let controller = {
     products.push(newProduct);
     let jsonProduct = JSON.stringify(products);
     fs.writeFileSync(productsFilePath, jsonProduct); //Reemplaza el archivo JSON anterior por el nuevo producto
-    res.redirect('home');
+    res.redirect('/home');
   },
   create: function (req, res) {
     res.render("./product/formularioProducto");
