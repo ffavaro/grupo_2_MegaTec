@@ -28,7 +28,7 @@ let controller = {
     res.redirect('/home');
   },
   create: function (req, res) {
-    res.render("./product/formularioProducto");
+    res.render("./product/create");
   },
   detail: function (req, res) {
     /**
