@@ -17,11 +17,12 @@ let controller = {
       id: req.body.id,
       name: req.body.name,
       description: req.body.description,
-      price: req.body.price,
-      discount: req.body.discount,
+      price: parseInt(req.body.price),
+      discount: parseInt(req.body.discount),
       category: req.body.category,
-      image: req.body.image
+      image: req.file.filename
     };
+   
 
     products.push(newProduct);
     let jsonProduct = JSON.stringify(products);
