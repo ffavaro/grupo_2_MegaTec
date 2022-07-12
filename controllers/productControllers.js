@@ -22,8 +22,6 @@ let controller = {
       category: req.body.category,
       image: req.file.filename
     };
-   
-
     products.push(newProduct);
     let jsonProduct = JSON.stringify(products);
     fs.writeFileSync(productsFilePath, jsonProduct); //Reemplaza el archivo JSON anterior por el nuevo producto

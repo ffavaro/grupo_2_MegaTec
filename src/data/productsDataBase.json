@@ -6,7 +6,7 @@
         "discount": 20,
         "category": "in-offer",
         "description": "Este procesador es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución, tiene memoria caché de 4 MB rápida y volátil. Procesador gráfico Radeon Vega 8 Graphics con potencia  de 65 W. Cuenta con 4 hilos que favorecen la ejecución de múltiples programas a la vez.",
-        "image": "AMD RYZEN 3 3200G.jpg"
+        "image": "AMD-RYZEN-3-3200G.jpg"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "discount": 10,
         "category": "in-offer",
         "description": "Este procesador es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución, tiene memoria caché de 4 MB, rápida y volátil. Procesador gráfico Radeon RX Vega 11 Graphic, con potencia de 65 W. Cuenta con 8 hilos que favorecen la ejecución de múltiples programas a la vez.",
-        "image": "AMD RYZEN 5 3400G 1.jpg"
+        "image": "AMD-RYZEN-5-3400G-1.jpg"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "discount": 30,
         "category": "in-offer",
         "description": "Este procesador brinda una experiencia perfecta y muy veloz gracias a los tiempos de arranque y la cpacidad de respuesta,tiene memoria de cache de 6 MB. CUneta con Intel HD Graphics 630, con potencia de 65 W.Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo. ",
-        "image": "INTEL Ci5 7th.jpg"
+        "image": "INTEL-Ci5-7th.jpg"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "discount": 20,
         "category": "in-offer",
         "description": "Este procesador ejecuta programas de edición de videos, creación de contenido, streaming y videojuegos sin afectar el rendimiento, tiene memoria caché de 12 MB. Procesador gráfico Intel UHD Graphics 630, con potencia  de 65 W. Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo.",
-        "image": "INTEL Ci5 10th.jpg"
+        "image": "INTEL-Ci5-10th.jpg"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "discount": 0,
         "category": "new-product",
         "description": "Este procesador ejecuta programas de edición de videos, creación de contenido, streaming y videojuegos sin afectar el rendimiento, tiene memoria caché de 25 MB. Procesador gráfico Intel UHD Graphics 630, con potencia  de 125 W. Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo.",
-        "image": "INTEL Ci9 12th.jpg"
+        "image": "INTEL-Ci9-12th.jpg"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "discount": 0,
         "category": "new-product",
         "description": "Este procesador ofrece un rendimiento ultrarrápido de más de 100 FPS en los juegos más populares del mundo, tiene 8 núcleos y 16 hilos de procesamiento, basado en la arquitectura AMD Zen 3 4.6 GHz Max Boost, desbloqueado para overclocking, 36 MB de caché, soporte DDR4-3200.",
-        "image": "AMD RYZEN 7 5800x.jpg"
+        "image": "AMD-RYZEN-7-5800x.jpg"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "discount": 0,
         "category": "new-product",
         "description": "Este procesador ofrece más espacio en caché y la arquitectura de hipersubprocesos con un alto rendimiento para aplicaciones exigentes con mejores gráficos y un impulso turbo más rápido, tiene 25 MB de caché L3 para aumentar el procesamiento de instrucciones y el rendimiento del sistema ",
-        "image": "INTEL Ci7 12th.jpg"
+        "image": "INTEL-Ci7-12th.jpg"
     },
     {
         "id": 8,
@@ -69,6 +69,6 @@
         "discount": 20,
         "category": "new-product",
         "description": "Este procesador ws ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución, tiene memoria caché de 64 MB, rápida y volátil. Soporta memoria RAM DDR4, su potencia es de 105 W.Cuenta con 24 hilos que favorecen la ejecución de múltiples programas a la vez.",
-        "image": "AMD-RYZEN 9-5950X.png"
+        "image": "AMD-RYZEN-9-5950X.png"
     }
 ]
