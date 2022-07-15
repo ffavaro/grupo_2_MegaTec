@@ -4,82 +4,62 @@
     box-sizing: border-box;
 }
 
-form{
+.conteiner {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border-radius: 3px;
-    padding: 1em;
-}
-.link-del-logo{
-    width:35%
-}
-.control-article{
-    display: flex;
+    align-items: stretch;
     justify-content: center;
-    border: solid 1px #ebebeb;
     background-color: #ebebeb;
 }
 
-.control-form-colum
-{ 
-    display: flex; 
-    flex-direction: column;
-    padding: 1em;
-    margin: 15px 15px;
-    padding: 5px;
-}
-
-.control-form label
-{
-    color: black;
-    display: block;
-    margin: 5px 5px;
-    font-size: 18px;
-}
-
-.control-form input {
-    padding: 10px 10px;
+.conteiner form {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    flex-grow: 1;
+    margin-bottom: 100px;
+    width: 50%;
+    margin-top: 40px;
+    background-color: white;
+}
+.conteiner form  article h2 {
+    padding: 15px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+.conteiner form  article {
+    padding: 15px;
+}
+
+.conteiner form  article label {
+    padding: 15px;
+}
+
+.conteiner form  article input {
+    padding: 15px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+.conteiner form  article button {
+    padding: 15px;
+    border-radius: 5px;
     border: solid 1px black;
 }
 
-.control-button
-{
-    display: flex;
-    justify-content: center;
-}
-
-textarea{
-    resize: none;    
-}
-
-
 @media (min-width:360px) {
-    .control-article{
-        display: block;
-        justify-content: center;
-    }
     *{
         box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
     }
 }
 @media (min-width:768px) {
-    .control-article{
-        display: flex;
-        justify-content: center;
-    }
     *{
         box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
     }
 }
 
 @media (max-width:1200px) {
-    .control-article{
-        display: flex;
-        justify-content: center;
-        max-width: 1100px;
-    }
     *{
         box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
     }
