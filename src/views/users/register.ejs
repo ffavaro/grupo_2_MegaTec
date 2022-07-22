@@ -9,40 +9,46 @@
 <body>
     <%- include('../partials/header') %>
         <main class="conteiner">
-            <form action="/user/new" enctype="multipart/form-data" method="post">
-                <article>
-                    <h2>Nuevo Usuario</h2>
-                </article>
-                <article>
-                    <label for="name">Nombre</label>
-                    <input type="text" id="user" name="name" placeholder="Ingrese su nombre" required maxlength="20">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="user" name="apellido" placeholder="Ingrese su apellido" required
-                        maxlength="20">
-                </article>
+            <form action="/user/new" class="myForm" enctype="multipart/form-data" method="post">
+                <div class="message">
+                    <article>
+                        <label for="avatar">Avatar</label>
+                        <input type="file" name="avatar" id="avatar" accept=".jpg, .png">
+                    </article>
+                </div>
+                <div class="contact">
+                    <article>
+                        <h2>Nuevo Usuario</h2>
+                    </article>
+                    <article>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="user" name="name" placeholder="Ingrese su nombre" required
+                            maxlength="20">
+                    </article>
+                    <article>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="user" name="apellido" placeholder="Ingrese su apellido" required
+                            maxlength="20">
+                    </article>
+                    <article>
+                        <label for="email">Email</label>
+                        <input type="email" id="user" name="email" placeholder="Ingrese su email" required
+                            maxlength="20">
 
-                <article>
-                    <label for="email">Email</label>
-                    <input type="email" id="user" name="email" placeholder="Ingrese su email" required maxlength="20">
-                    <label for="name">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Ingrese su Password" required
-                        maxlength="20">
-                </article>
+                    </article>
 
-                <article>
-                   
-                </article>
+                    <article>
+                        <label for="name">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Ingrese su Password" required
+                            maxlength="20">
+                    </article>
+                    
+                    <article>
+                        <button type="submit">Guardar</button>
+                        <button type="reset">Limpiar</button>
+                    </article>
 
-                <article>
-                    <label for="avatar">Avatar</label>
-                    <input type="file" name="avatar" id="avatar" accept=".jpg, .png">
-                </article>
-
-                <article>
-                    <button type="submit">Guardar</button>
-                    <button type="reset">Limpiar</button>
-                </article>
-
+                </div>
             </form>
         </main>
         <%- include('../partials/footer')%>
