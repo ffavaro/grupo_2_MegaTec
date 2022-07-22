@@ -1,87 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <link href="/css/styles-register.css" rel="stylesheet">
-        <%- include('../partials/head') %>
-    </head>
+<head>
+    <link href="/css/styles-register.css" rel="stylesheet">
+    <%- include('../partials/head') %>
+</head>
 
-    <body>
-        <%- include('../partials/header') %>
-    <main>
-        <form action="/newAccount" method="post" class="create-form">
-            <article class="control-article">
-                <div class="control-form-colum">
-                    <div class="control-form">
+<body>
+    <%- include('../partials/header') %>
+        <main class="conteiner">
+            <form action="/user/new" class="myForm" enctype="multipart/form-data" method="post">
+                <div class="message">
+                    <article>
+                        <label for="avatar">Avatar</label>
+                        <input type="file" name="avatar" id="avatar" accept=".jpg, .png">
+                    </article>
+                </div>
+                <div class="contact">
+                    <article>
+                        <h2>Nuevo Usuario</h2>
+                    </article>
+                    <article>
                         <label for="name">Nombre</label>
                         <input type="text" id="user" name="name" placeholder="Ingrese su nombre" required
                             maxlength="20">
-                    </div>
-                    <div class="control-form">
+                    </article>
+                    <article>
                         <label for="apellido">Apellido</label>
                         <input type="text" id="user" name="apellido" placeholder="Ingrese su apellido" required
                             maxlength="20">
-                    </div>
-                    <div class="control-form">
+                    </article>
+                    <article>
                         <label for="email">Email</label>
                         <input type="email" id="user" name="email" placeholder="Ingrese su email" required
                             maxlength="20">
-                    </div>
-                    <div class="control-form">
+
+                    </article>
+
+                    <article>
                         <label for="name">Password</label>
                         <input type="password" id="password" name="password" placeholder="Ingrese su Password" required
                             maxlength="20">
-                    </div>
-                    <div class="control-form">
-                        <label for="confirmPassword">Confirmar Password</label>
-                        <input type="password" id="confirmPassword" name="confirmPassword"
-                            placeholder="Ingrese su password" required maxlength="20">
-                    </div>
-                    <div class="control-form">
-                        <label for="avatar">Avatar</label>
-                        <input type="file" name="avatar" id="avatar" accept=".jpg, .png">
-                    </div>
-                </div>
-                <div class="control-form-colum">
-                    <div class="control-form">
-                        <label for="domicilio">Domicilio</label>
-                        <input type="text" id="domicilio" name="domicilio" placeholder="Ingrese su domicilio" required
-                            maxlength="20">
-                    </div>
-                    <div class="control-form">
-                        <label for="barrio">Barrio</label>
-                        <input type="text" id="barrio" name="barrio" placeholder="Ingrese su barrio" required
-                            maxlength="20">
-                    </div>
-                    <div class="control-form">
-                        <label for="piso">Piso</label>
-                        <input type="text" id="piso" name="piso" placeholder="Numero de piso" maxlength="20">
-                    </div>
-                    <div class="control-form">
-                        <label for="telefono">Telefono</label>
-                        <input type="text" id="telefono" name="telefono" placeholder="Ingrese su telefono"
-                            maxlength="10">
-                    </div>
-                    <div class="control-form">
-                        <label for="celular">Celular</label>
-                        <input type="text" id="celular" name="celular" placeholder="Ingrese su celular" required
-                            maxlength="13">
-                    </div>
-                    <div class="control-form">
-                        <label for="referencia">Referencias</label>
-                        <textarea name="referencia" id="referencia" cols="30" rows="10" required
-                            maxlength="100"></textarea>
-                    </div>
+                    </article>
+                    
+                    <article>
+                        <button type="submit">Guardar</button>
+                        <button type="reset">Limpiar</button>
+                    </article>
 
                 </div>
-            </article>
-            <div class="control-button">
-                <button class="button-save" type="submit">Guardar</button>
-                <button class="button-reset" type="reset">Limpiar</button>
-            </div>
-        </form>
-    </main>
-    <%- include('../partials/footer')%>
+            </form>
+        </main>
+        <%- include('../partials/footer')%>
 </body>
 
 </html>
