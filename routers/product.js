@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router();
 const path = require('path')
 const productControllers = require('../controllers/productControllers');
+//express-validation
+const {body}=require('express-validator');
+const validations = [];
 //multer
 const multer =require('multer');
-
 var storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, 'public/images/product')

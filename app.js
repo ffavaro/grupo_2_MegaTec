@@ -1,8 +1,7 @@
 const express = require('express');
-const methodOverride =  require('method-override'); 
+const methodOverride =  require('method-override');
 // Pasar poder usar los métodos PUT y DELETE
-const app = express();
-
+const app = express();  
 //Routers
 const main = require("./routers/main");
 const product = require("./routers/product");

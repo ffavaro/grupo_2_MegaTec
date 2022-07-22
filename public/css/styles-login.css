@@ -24,6 +24,15 @@ html {
 body{
     margin: 0%;
 }
+.fa-thin {
+    color: white;
+    padding: 6px;
+    border-radius: 4px;
+    margin: 0%;
+    font-size: 1.5em;
+    width: 100%;
+    
+}
 
 body h1 {
     color: white;
