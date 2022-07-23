@@ -5,8 +5,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8")); // Convierte 
 //validation-result
 const{ validationResult } = ('express-validator')
 const bcrypt = require('bcrypt');
-
-
+const bcryptjs = require('bcryptjs');
 let controller = {
 
     register: function (req, res) {
@@ -15,23 +14,22 @@ let controller = {
     singIn: function (req, res) {
         res.render('./users/singIn')
     },
-    // login: function (req,res) {
-    //  let userFound = users.find(oneUser => oneUser.email=== req.body);
-    //     res.send(userFound)
-    // },
     loginProcess: function (req,res) {
     let userFound = users.find(oneUser => oneUser.email === req.body.email);
     if (userFound){
-    if(userFound.password === req.body.password){
-        res.send('puedes ingresar')
+        let comparePassword = bcrypt.compareSync(req.body.password, userFound.password)
+    if(comparePassword === true){
+        req.session.userLogged = userFound
+        delete userFound.password
+    return res.redirect('../home')
     }
-    }
+    } 
     return res.render('./users/singIn',{
-        errors: {
-            email:{
-                msg: 'email no registrado'
-            }
+    errors: {
+        email:{
+            msg: 'email no registrado'
         }
+    }
     });
     },
     store: (req, res) => {
@@ -45,12 +43,16 @@ let controller = {
             password:hash,
             category: req.body.category,
             image: req.file.filename
-          };
-          users.push(newUser);
-          let jsonProduct = JSON.stringify(users);
+        };
+        users.push(newUser);
+        let jsonProduct = JSON.stringify(users);
           fs.writeFileSync(usersFilePath, jsonProduct); //Reemplaza el archivo JSON anterior por el nuevo producto
-          res.redirect('/');
-    }
+        res.redirect('/');
+    },
+    home: (req,res) => {
+        return res.render('home',{
+        user:req.session.userLogged
+    })}
 }
 
 module.exports = controller;

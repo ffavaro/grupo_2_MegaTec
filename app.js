@@ -1,5 +1,6 @@
 const express = require('express');
 const methodOverride =  require('method-override');
+const session = require('express-session');
 // Pasar poder usar los métodos PUT y DELETE
 const app = express();  
 //Routers
@@ -10,6 +11,13 @@ const users = require("./routers/user");
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static("./public"));
+app.use(session(
+    {
+        secret:'Shhh',
+        resave: false,
+        saveUninitialized: false
+    }
+))
 
 // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(methodOverride("_method"));

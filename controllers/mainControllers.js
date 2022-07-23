@@ -11,6 +11,7 @@ let controller = {
     index: function (req,res) {
         let listProduct = products;
         res.render('home', {listProduct});
+
     }
 }
 

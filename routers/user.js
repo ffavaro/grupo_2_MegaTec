@@ -8,19 +8,17 @@ const validations =[
     body('password').notEmpty().withMessage('Ingresa tú contraseña')
 ];
 
-
-router.get('/register', userControllers.register);
-// Craer la ruta /login al iniciar sesion 
 //Login
 router.get('/login',userControllers.singIn);
 router.post('/login',userControllers.loginProcess);
+router.get('/home', userControllers.home)
 const path = require('path')
 //multer
 const multer =require('multer');
 
 var storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, 'public/images/users')
+		cb(null, 'public/images/user')
 	},
 	filename: (req, file, cb) =>{
 		cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
