@@ -6,6 +6,8 @@ const app = express();
 const main = require("./routers/main");
 const product = require("./routers/product");
 const users = require("./routers/user");
+var cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -13,6 +15,11 @@ app.use(express.static("./public"));
 
 // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(methodOverride("_method"));
+
+//Cookies
+app.use(cookieParser());
+//Session
+app.use(session({secret: "frase secreta"}));
 
 //Views
 app.set('view engine', 'ejs');

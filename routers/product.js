@@ -7,6 +7,9 @@ const {body}=require('express-validator');
 const validations = [];
 //multer
 const multer =require('multer');
+// Middleware
+const userMiddleware = require('../middleware/userMiddleware');
+
 var storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, 'public/images/product')
@@ -19,30 +22,28 @@ var storage = multer.diskStorage({
 const uploadFile = multer({ storage: storage })
 
 /*Get list product */
-router.get('/', productControllers.index);
+router.get('/', userMiddleware.allAccess, productControllers.index);
 
 /*Product detail */
-router.get('/detail/:id', productControllers.detail);
+router.get('/detail/:id', userMiddleware.allAccess, productControllers.detail);
 
 /**Product Cart */
-router.get('/productCart', productControllers.productCart);
+router.get('/productCart', userMiddleware.withUser, productControllers.productCart);
 
 // Creación de productos GET y envío de información POST
 // La ruta completa es /product/create, porque en app.js ya está este prefijo
-router.get('/create', productControllers.create);
-router.post('/create', uploadFile.single('image'), productControllers.store);
+router.get('/create', userMiddleware.withUser, productControllers.create);
+router.post('/create', userMiddleware.withUser, uploadFile.single('image'), productControllers.store);
 
 /*Product detail */
-router.get('/:id', productControllers.detail);
+router.get('/:id', userMiddleware.allAccess, productControllers.detail);
 
 /*Product edit */
-//falta el put y el get
-router.get('/edit/:id', productControllers.edit);
-router.post('/edit/:id', productControllers.update);
+router.get('/edit/:id',  userMiddleware.withUser, productControllers.edit);
+router.post('/edit/:id', userMiddleware.withUser, productControllers.update);
 
 /**Delete  */
-
-router.delete('/delete/:id', productControllers.delete);
+router.delete('/delete/:id', userMiddleware.withUser, productControllers.delete);
 
 module.exports = router;
 
