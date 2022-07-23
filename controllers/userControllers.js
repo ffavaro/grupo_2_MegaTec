@@ -1,16 +1,18 @@
-const path = require('path');
+const path = require("path");
 const fs = require("fs");
-const usersFilePath = path.join(__dirname,"../src/data/users.json");
+const usersFilePath = path.join(__dirname, "../src/data/users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8")); // Convierte el JSON en un array de objetos literales
 //validation-result
 const{ validationResult } = ('express-validator')
 const bcrypt = require('bcrypt');
 const bcryptjs = require('bcryptjs');
 let controller = {
-
-    register: function (req, res) {
-        res.render('./users/register');
-    },
+register: function (req, res) {
+    res.render("./users/register");
+  },
+singIn: function (req, res) {
+    res.render("./users/singIn");
+},
     singIn: function (req, res) {
         res.render('./users/singIn')
     },
@@ -19,6 +21,8 @@ let controller = {
     if (userFound){
         let comparePassword = bcrypt.compareSync(req.body.password, userFound.password)
     if(comparePassword === true){
+        if(req.body.recordarme == "on")
+        res.cookie('user', userFound)
         req.session.userLogged = userFound
         delete userFound.password
     return res.redirect('../home')
@@ -53,6 +57,6 @@ let controller = {
         return res.render('home',{
         user:req.session.userLogged
     })}
-}
+};
 
 module.exports = controller;
