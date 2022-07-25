@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/css/styles-profile.css" rel="stylesheet">
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <header> 
+        <a class= link-del-logo href="/home"> <img class="logo" src="/images/MEGATEC (2).png"> </img></a>
+        <div class="Buscador">
+        <div class="input">Buscar productos..<i class="lupa"><i class="fa fa-search"></i></i></i></div> 
+        <div class="iconos">
+            <i class="start"><i class="fa-solid fa-star"></i></i>
+            <a href="/home"><i class="user"><i class="fa-solid fa-house"></i></i></a>
+            <a href="/product/productCart"><i class="car"><i class="fa-solid fa-cart-plus"></i></i></a>
+            <i class="lupa2"><i class="fa fa-search"></i></i>
+        </div>
+        
+        </div>
+        <ul class="sin-viñetas">
+            <li><a href="#">Productos</i></a></li>
+            <li><a href="#">Historial</i></a></li>
+            <li><a href="#">Ofertas</i></a></li>
+            <li><a href="#">Asesor</i></a></li>
+            <li><a href="#">Centro de Ayuda</i></a></li>
+        </ul>
+        <div class="burger-menu"> <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <main>
+    <div class="profile">
+     <h2> Hola! <%= usuario.firstname%></h2>
+     <img width="50%" class= "imageUser"src="/images/user/<%= usuario.image%>" > 
+     <h3> email: <%= usuario.email%> </h3>
+
+
+    </div>
+
+   </main>
+        <%- include('../partials/footer')%>
+</body>
+
+</html>

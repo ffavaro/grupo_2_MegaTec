@@ -8,6 +8,7 @@ const path = require('path')
 const multer =require('multer');
 // Middleware
 const userMiddleware = require('../middleware/userMiddleware');
+const { redirectProfile } = require('../middleware/userMiddleware');
 
 const validations =[
     body('email').notEmpty().withMessage('Ingresa tú correo electrónico').bail().isEmail().withMessage('Correo eléctronico no válido'),
@@ -30,6 +31,8 @@ router.get('/register', userMiddleware.redirectProfile, userControllers.register
 //Login
 router.get('/login', userMiddleware.verificationLogged, userControllers.singIn);
 router.post('/login', userMiddleware.withUser, userControllers.loginProcess);
+// Vista profile
+router.get('/profile', userControllers.profile); 
 
 router.post('/new', uploadFile.single('avatar'), userControllers.store)
 

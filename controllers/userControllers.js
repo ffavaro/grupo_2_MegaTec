@@ -13,20 +13,24 @@ register: function (req, res) {
 singIn: function (req, res) {
     res.render("./users/singIn");
 },
-    singIn: function (req, res) {
-        res.render('./users/singIn')
-    },
     loginProcess: function (req,res) {
     let userFound = users.find(oneUser => oneUser.email === req.body.email);
     if (userFound){
         let comparePassword = bcrypt.compareSync(req.body.password, userFound.password)
     if(comparePassword === true){
+        delete userFound.password;
         if(req.body.recordarme == "on")
         res.cookie('user', userFound)
-        req.session.userLogged = userFound
-        delete userFound.password
-    return res.redirect('../home')
-    }
+        req.session.userLogged = userFound;
+    return res.redirect('profile')
+
+    } return res.render("./users/singIn",{
+        errors: {
+            password:{
+                msg: 'Constraseña Inválida'
+            }
+        } 
+    })
     } 
     return res.render('./users/singIn',{
     errors: {
@@ -53,10 +57,10 @@ singIn: function (req, res) {
           fs.writeFileSync(usersFilePath, jsonProduct); //Reemplaza el archivo JSON anterior por el nuevo producto
         res.redirect('/');
     },
-    home: (req,res) => {
-        return res.render('home',{
-        user:req.session.userLogged
-    })}
+    profile: (req,res) => {
+        console.log(req.session)
+        return res.render('./users/profile',{ usuario: req.session.userLogged})
+    }
 };
 
 module.exports = controller;
