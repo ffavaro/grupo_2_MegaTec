@@ -26,11 +26,11 @@ var storage = multer.diskStorage({
 
 const uploadFile = multer({ storage: storage })
 
-router.get('/register', userMiddleware.redirectProfile, userControllers.register);
+router.get('/register', userMiddleware.verificationLogged ,userControllers.register);
 // Craer la ruta /login al iniciar sesion 
 //Login
-router.get('/login', userMiddleware.verificationLogged, userControllers.singIn);
-router.post('/login', userMiddleware.withUser, userControllers.loginProcess);
+router.get('/login', userMiddleware.redirectProfile, userControllers.singIn);
+router.post('/login', userControllers.loginProcess);
 // Vista profile
 router.get('/profile', userControllers.profile); 
 
