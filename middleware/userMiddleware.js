@@ -13,6 +13,11 @@ let userMiddleware = {
         res.redirect("/home");
       }
     }
+    if(req.session.userLogged  != null)
+    {
+      res.redirect("/home");
+    }
+
     next();
   },
   allAccess: (req, res, next) => {
@@ -25,11 +30,20 @@ let userMiddleware = {
     if (req.cookies.user != null) {
       res.redirect("/users/profile");
     }
+
+    if(req.session.userLogged  != null)
+    {
+      res.redirect("/home");
+    }
     
     next();
   },
   withUser: (req, res, next) => {
     if (req.cookies.user != null) {
+      res.redirect("/");
+    }
+    if(req.session.userLogged  != null)
+    {
       res.redirect("/");
     }
     next();
