@@ -12,21 +12,16 @@ let controller = {
   singIn: function (req, res) {
     res.render("./users/singIn");
   },
-  loginProcess: function (req, res) {
+   loginProcess: async function (req, res) {
     let userFound = users.find((oneUser) => oneUser.email === req.body.email);
-    console.log(userFound);
+    
     if (userFound) {
-      console.log(req.body.password);
-      console.log(userFound.password);
-      /*let comparePassword = bcrypt.compareSync(
-        userFound.password,
-        req.body.password
-      );
-      console.log(comparePassword);/*/
-      if ( req.body.password === userFound.password) {
-        delete userFound.password;
+      let password = req.body.password;
+
+      if ( bcrypt.compareSync(password,userFound.password)) 
+      {
         if (req.body.recordarme == "on") res.cookie("user", userFound);
-        req.session.userLogged = userFound;
+            req.session.userLogged = userFound;
         return res.redirect("profile");
       }
 
