@@ -68,6 +68,22 @@ Junto con el profesor revisamos el error que tiene Clara en dicho formulario y n
 
 El otro momento de la reunión fue al terminar la clase, realizamos otra reuníon para seguir revisando el error que presenta el proyecto, no encontramos la solución pero nos comprometimos a seguir investigando y de ser necesario preguntarle a los compañeros por slack para ver si a ellos se les ha presentado el mismo error.
 
+# SPRINT 5
 
+## Weekly - 11 de Julio de 2022
+En está reunión se realizó un retrospectiva del Sprint 4 y se corrigieron los errores que se presentaron en ese Sprint. Errores que se obtunieron por falta de una reunión al finalizar el Sprint, ya que al solucionar unos conflictos se borro la ruta 'delete' de productos. 
+Luego se dar solución a esto se analizó y planificó el Sprint 5, se realizó la primera actvidad que fue actualizar el tablero de trello, en el cual definimos cada actividad, las especificaciones y entregables correspondientes, posteriormente dividimos estas actividades  entre los integrates del grupo.
 
+## Weekly - 18 de Julio de 2022
 
+### Francisco 
+Implementé la entidad de usuarios basandome en la estructura ya hecha para productos. Estoy trabajando en la implementación del registro de usuarios, modificando el formulario, implementando multer, bcrypt y demás...
+### Clara
+Actualicé el archivo retro con lo  hablado y hecho en la reunión anterior, al igual que el archivo weekly. Arranque a trabajar con la implementación del login del usuario pero tuve problemas al empezar ya que no tenia muy claro como arrancar en cuanto a las rutas y los modulos en el controlador. Pero volví a ver los videos del Playground y con ayuda de Francisco ya estoy en marcha con esa actividad.
+
+## Weekly - 23 de Julio de 2022
+
+### Francisco 
+Cree la carpeta middleware donde incluí los métodos que se encargan de hacer las rutas accesibles de acuerdo a si el usuario está o no logueado. También realicé la implementación de recordar al usuario.
+### Clara
+Termine de hacer la implementación del login y de actualizar el archivo weekly.md con las reuniones realizadas. 

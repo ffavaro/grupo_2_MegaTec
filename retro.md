@@ -49,3 +49,19 @@ No dejar actividades importantes del Sprint para un dia o dos antes del Sprint, 
 Continuar mejorando la comunicación entre los integrantes del equipo y ser más responsables con las actividades que a cada integrante del equipo le corresponde.
 
 Como conclusión final, estamos trabajando bien pero necesitamos mejorar la comunicación del equipo y el compromiso de cada integrante con las entregas.
+
+# Sprint 4
+## Breve retrospectiva
+Culminamos con éxito el Sprint #4, y realizamos una retrospectiva basada en la Estrella de Mar llegamos a las siguientes conclusiones:
+### Seguir haciendo:
+Entregar a tiempo las actividades de los Sprint, seguir mejorando la comunicación grupal.
+### Menos de:
+Entregar el Sprint sin darle una buena revisada a todas las actividades al final, ya que nos confiamos de haber terminado todo y no nos dimos cuenta que al solucionar un conflicto eliminamos la ruta "delete".
+### Más de:
+Seguir trabajando en equipo, apoyandonos y llegar con éxito al final de cada Sprint.
+### Dejar de hacer:
+Confiarnos al momento de entregar el sprint, es necesario hacer una reunión al finalizar las actividades de cada Sprint y revisar que todo este completo y funcionando bien. Así podemos asegurar que cumplimos con todos los requerimientos.
+### Empezar hacer:
+Continuar mejorando la comunicación entre los integrantes del equipo y cumplir con las consiganas de cada Sprint.
+
+Como conclusión final hemos aprendido y avanzado mucho, es gratificante como el proyecto cada vez se ve más completo y funcional. Debemos seguir trabajando en conjunto para que al final tengamos unos buenos conocimientos y buen proyecto.
