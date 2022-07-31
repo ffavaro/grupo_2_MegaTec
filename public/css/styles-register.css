@@ -2,30 +2,26 @@
     box-sizing: border-box;
 }
 
+.conteiner{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+}
 .myForm {
     display: flex;
-    background-color: beige;
+    background-color: white;
     border-radius: 3px;
     padding: 1.8em;
-    justify-content: center;
 }
 
-.message {
-    display: flex;
-    flex-direction: column;
-    order: 2;
-}
-
-.message>textarea {
-    flex: 1;
-    min-width: 18em;
-}
 
 .contact {
     margin-top: 50px;
     flex: 1;
     order: 1;
     margin-right: 2em;
+    justify-content: center;
 }
 
 .contact input {
