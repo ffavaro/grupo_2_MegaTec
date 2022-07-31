@@ -29,10 +29,12 @@
     </header>
     <main>
     <div class="profile">
-    <img width="25%" class= "imageUser"src="/images/user/avatar-1659280493541.jpg"> 
+        <div class="contenedor">
+    <img width="25%" class= "imageUser"src="/images/user/<%= usuario.image %>"> 
     <div class="hiEmail">
-    <h2> Hola! </h2>
-    <h3> email: </h3>
+    <h2> Hola! <%= usuario.firstname %> </h2>
+    <h3> email: <%= usuario.email %> </h3>
+</div>
     </div>
 
     </div>

@@ -3,20 +3,37 @@
     align-content: center;
 
 }
+.contenedor{
+    width:75%;
+    display: flex;
+    background-color: #D4E6F1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
 .hiEmail{
-    background-color: bisque;
+  
     display: flex;
     flex-direction: column;
    justify-content: center;
    margin-left: 30px;
    margin: 20px;
-   width: 30%;
+   width: 50%;
+   
 
 } 
 .imageUser{
     padding: 20px;
-    margin-right: 1px;
+    box-shadow: 0px 0px 10px rgb(16 16 16);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 h2 h3 {
     margin: 0%;
+}
+h2{
+    font-size: 70px;
+}
+h3{
+    font-size: 30px;
 }
