@@ -18,11 +18,8 @@ let controller = {
     if (userFound) {
       console.log(req.body.password);
       console.log(userFound.password);
-      /*let comparePassword = bcrypt.compareSync(
-        userFound.password,
-        req.body.password
-      );
-      console.log(comparePassword);/*/
+      let comparePassword = bcrypt.compareSync(userFound.password,req.body.password);
+      console.log(comparePassword);
       if ( req.body.password === userFound.password) {
         delete userFound.password;
         if (req.body.recordarme == "on") res.cookie("user", userFound);

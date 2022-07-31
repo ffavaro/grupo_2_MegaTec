@@ -1,5 +1,22 @@
 .profile{
     display: flex;
+    align-content: center;
+
+}
+.hiEmail{
+    background-color: bisque;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+   justify-content: center;
+   margin-left: 30px;
+   margin: 20px;
+   width: 30%;
+
+} 
+.imageUser{
+    padding: 20px;
+    margin-right: 1px;
+}
+h2 h3 {
+    margin: 0%;
 }
