@@ -85,3 +85,16 @@ Actualicé el archivo retro con lo  hablado y hecho en la reunión anterior, al 
 Cree la carpeta middleware donde incluí los métodos que se encargan de hacer las rutas accesibles de acuerdo a si el usuario está o no logueado. También realicé la implementación de recordar al usuario.
 ### Clara
 Termine de hacer la implementación del login y de actualizar el archivo weekly.md con las reuniones realizadas.
+
+## Breve retrospectiva
+Culminamos con éxito el Sprint #5, y realizamos una retrospectiva basada en la Estrella de Mar llegamos a las siguientes conclusiones:
+### Seguir haciendo:
+Entregar a tiempo las actividades de los Sprint, seguir mejorando la comunicación grupal.
+### Menos de:
+Llegar con el tiempo justo para realizar las actividades del sprint y las opcionales
+### Más de:
+Seguir trabajando en equipo, apoyandonos y llegar con éxito al final de cada Sprint.
+### Dejar de hacer:
+Algunas actividades a las corridas o correcciones,
+### Empezar hacer:
+Trabajar con ramas, para evitar tener tantos conflictos al momento de subir los cambio.
