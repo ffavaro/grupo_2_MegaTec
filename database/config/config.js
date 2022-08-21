@@ -1,9 +1,9 @@
 
 module.exports = {
   "development": {
-    "username": "root",
+    "username": "clara",
     "password": null,
-    "database": "database_development",
+    "database": "megatec_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
