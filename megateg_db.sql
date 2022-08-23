@@ -26,11 +26,7 @@ CREATE TABLE `brand`  (
   `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `state` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of brand
--- ----------------------------
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for category
@@ -41,50 +37,7 @@ CREATE TABLE `category`  (
   `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `state` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of category
--- ----------------------------
-
--- ----------------------------
--- Table structure for compra
--- ----------------------------
-DROP TABLE IF EXISTS `compra`;
-CREATE TABLE `compra`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `date` datetime(0) NULL DEFAULT NULL,
-  `number` int NULL DEFAULT NULL,
-  `user_id` int NULL DEFAULT NULL,
-  `domicilio` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of compra
--- ----------------------------
-
--- ----------------------------
--- Table structure for detalle_compra
--- ----------------------------
-DROP TABLE IF EXISTS `detalle_compra`;
-CREATE TABLE `detalle_compra`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `compra_id` int NULL DEFAULT NULL,
-  `product_id` int NULL DEFAULT NULL,
-  `amount` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `priceUnit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `priceTotal` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `fk_compra`(`compra_id`) USING BTREE,
-  INDEX `fk_product`(`product_id`) USING BTREE,
-  CONSTRAINT `fk_compra` FOREIGN KEY (`compra_id`) REFERENCES `compra` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT `fk_product` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of detalle_compra
--- ----------------------------
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for product
@@ -107,10 +60,38 @@ CREATE TABLE `product`  (
   CONSTRAINT `fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
+-- ----------------------------
+-- Table structure for purchase
+-- ----------------------------
+DROP TABLE IF EXISTS `purchase`;
+CREATE TABLE `purchase`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `date` datetime(0) NULL DEFAULT NULL,
+  `number` int NULL DEFAULT NULL,
+  `user_id` int NULL DEFAULT NULL,
+  `domicilio` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_user_id`(`user_id`) USING BTREE,
+  CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
--- Records of product
+-- Table structure for purschase_detail
 -- ----------------------------
+DROP TABLE IF EXISTS `purschase_detail`;
+CREATE TABLE `purschase_detail`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `compra_id` int NULL DEFAULT NULL,
+  `product_id` int NULL DEFAULT NULL,
+  `amount` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `priceUnit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `priceTotal` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_compra`(`compra_id`) USING BTREE,
+  INDEX `fk_product`(`product_id`) USING BTREE,
+  CONSTRAINT `fk_compra` FOREIGN KEY (`compra_id`) REFERENCES `purchase` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT `fk_product` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for type_user
@@ -121,11 +102,7 @@ CREATE TABLE `type_user`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `state` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of type_user
--- ----------------------------
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for users
@@ -143,10 +120,5 @@ CREATE TABLE `users`  (
   INDEX `fk_type_user`(`type_id`) USING BTREE,
   CONSTRAINT `fk_type_user` FOREIGN KEY (`type_id`) REFERENCES `type_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of users
--- ----------------------------
-
 
 SET FOREIGN_KEY_CHECKS = 1;
