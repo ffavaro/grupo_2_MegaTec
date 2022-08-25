@@ -1,33 +1,32 @@
-const sequelize = require("sequelize");
+module.exports = (sequelize, DataTypes) => {
+  const Purchase = sequelize.define(
+    "Purchase",
+    {
+      id: {
+        primaryKey: true,
+        autoIncrement: true,
+        type: DataTypes.BIGINT(11),
+      },
 
-module.exports = (sequelize, dataType) => {
-const Purchase = sequilize.define ('Purchase',{
+      date: {
+        type: DataTypes.DATE(0),
+      },
 
-    id:{
-    primaryKey: true,
-    autoIncrement: true,
-    type: DataTypes.INTERGER(11)
+      number: {
+        type: DataTypes.BIGINT(11),
+      },
+
+      user_id: {
+        type: DataTypes.BIGINT(11),
+      },
+
+      shipment: {
+        type: DataTypes.STRING(255),
+      },
     },
-
-    date:{
-    type: dataType.datetime(0)  
-    },
-
-    number:{
-    type: dataType.INTERGER(11)
-    },
-
-    user_id:{
-    type: DataTypes.INTERGER(11)   
-    },
-
-    shipment:{
-    type: dataType.VARCHAR(255)    
+    {
+      timestamps: false,
     }
-
-},
-{
-    timestamps: false
-})
-return Purchase
+  );
+  return Purchase;
 };

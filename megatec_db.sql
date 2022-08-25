@@ -5,7 +5,7 @@
  Source Server Type    : MySQL
  Source Server Version : 100421
  Source Host           : localhost:3306
- Source Schema         : megateg_db
+ Source Schema         : megatec_db
 
  Target Server Type    : MySQL
  Target Server Version : 100421
@@ -13,8 +13,8 @@
 
  Date: 14/08/2022 18:17:55
 */
-CREATE DATABASE megateg_db
-SET NAMES utf8mb4;
+CREATE DATABASE megatec_db
+--SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
@@ -42,8 +42,8 @@ CREATE TABLE `category`  (
 -- ----------------------------
 -- Table structure for product
 -- ----------------------------
-DROP TABLE IF EXISTS `product`;
-CREATE TABLE `product`  (
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE `products`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `price` decimal(10, 2) NULL DEFAULT NULL,

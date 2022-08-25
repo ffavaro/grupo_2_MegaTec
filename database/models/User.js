@@ -1,42 +1,41 @@
-const sequelize = require("sequelize");
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define(
+    "User",
+    {
+      id: {
+        primaryKey: true,
+        autoIncrement: true,
+        type: DataTypes.BIGINT(11),
+      },
 
-module.exports = (sequelize, dataTypes) => {
-const User = sequelize.define  ( 'User', {
+      first_name: {
+        type: DataTypes.STRING(255),
+      },
 
-    id:{
-    primaryKey: true,
-    autoIncrement: true,
-    type: DataTypes.INTERGER(11)
+      last_name: {
+        type: DataTypes.STRING(255),
+      },
+
+      email: {
+        type: DataTypes.STRING(255),
+      },
+
+      password: {
+        type: DataTypes.STRING(255),
+      },
+
+      image: {
+        type: DataTypes.STRING(255),
+      },
+
+      type_id: {
+        foreingKey: true, //Preguntar si esto se pone
+        type: DataTypes.BIGINT(11),
+      },
     },
-
-    first_name:{
-    not_null,
-    type: dataTypes.VARCHAR(255)
-    },
-
-    last_name:{
-    not_null,
-    type: dataTypes.VARCHAR(255)
-    },
-
-    email:{
-    type: dataTypes.VARCHAR(255)
-    },
-
-    password:{
-    type: dataTypes.VARCHAR(255)
-    },
-
-    path_avatar:{
-    type: dataTypes.VARCHAR(255)  
-    },
-
-    type_id:{
-    foreingKey: true, //Preguntar si esto se pone
-    type: DataTypes.INTERGER(11)
+    {
+      timestamps: false,
     }
-},{
-    timestamps: false
-})
-return User
+  );
+  return User;
 };

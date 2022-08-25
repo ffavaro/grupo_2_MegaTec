@@ -1,24 +1,24 @@
-const sequelize = require("sequelize");
-
-module.exports = (sequelize, dataType) => {
-const Brand = sequilize.define ('TypeUser',{
-    id:{
-    primaryKey: true,
-    autoIncrement: true,
-    type: DataTypes.INTERGER(11)
+module.exports = (sequelize, DataTypes) => {
+  const Brand = sequelize.define(
+    "Brand",
+    {
+        id: {
+            primaryKey: true,
+            autoIncrement: true,
+            type: DataTypes.BIGINT(11),
+          },
+    
+          description: {
+            type: DataTypes.STRING(255),
+          },
+    
+          state: {
+            type: DataTypes.STRING(255),
+          },
     },
-
-    description:{
-    type: dataType.VARCHAR(255)    
-    },
-
-    state:{
-    type: dataType.VARCHAR(255)
+    {
+      timestamps: false,
     }
-
-},
-{
-    timestamps: false
-})
-return Brand;
+  );
+  return Brand;
 };

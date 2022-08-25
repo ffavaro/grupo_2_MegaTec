@@ -40,7 +40,7 @@ router.get('/:id', userMiddleware.allAccess, productControllers.detail);
 
 /*Product edit */
 router.get('/edit/:id',  userMiddleware.withUser, productControllers.edit);
-router.post('/edit/:id', userMiddleware.withUser, productControllers.update);
+router.post('/edit/:id', userMiddleware.withUser, uploadFile.single('image'), productControllers.update);
 
 /**Delete  */
 router.delete('/delete/:id', userMiddleware.withUser, productControllers.delete);
