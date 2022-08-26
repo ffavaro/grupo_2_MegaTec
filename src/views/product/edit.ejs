@@ -8,7 +8,7 @@
 <body>
     <%- include('../partials/header') %>
         <main class="Formulario">
-            <form method="POST" accion="/product/edit/<%= product.id %>?_method=PUT" class="Formulario-de-edicion">
+            <form method="POST" enctype="multipart/form-data" accion="/product/edit/<%= product.id %>?_method=PUT" class="Formulario-de-edicion">
                 <h1>
                     <p>EDICIÓN DE PRODUCTOS</p>
                 </h1>
@@ -29,13 +29,27 @@
                     <input type="number" name="discount" id="discount" value="<%= product.discount %>">
                 </fieldset>
                 <fieldset>
+                    <legend>Stok</legend>
+                    <input type="number" name="stock" id="stock" placeholder="10">
+                </fieldset>
+                <fieldset>
                     <legend>Categoría</legend>
-                    <input type="text" name="category" id="category" value="<%= product.category %>">
+                    <select name="category_id" id="category_id">
+                        <option value="1">En Oferta</option>
+                        <option value="2">Nuevo</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Marca</legend>
+                    <select name="brand_id" id="brand_id">
+                        <option value="1">AMD</option>
+                        <option value="2">INTEL</option>
+                    </select>
                 </fieldset>
                 <fieldset>
                     <legend>Imagen del Producto</legend>
                     <img src="/images/<%= product.image %> " alt="<%= product.name %> "> </img>
-                    <input type="file" name="image" accept=".jpg" multiple>
+                    <input type="file" name="image" id="image" accept=".jpg" required multiple>
                 </fieldset>
                 <div class="botones">
                     <div class="reset">

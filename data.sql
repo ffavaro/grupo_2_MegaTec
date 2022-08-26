@@ -34,8 +34,8 @@ INSERT INTO product(id,name,price,discount,category_id,description,image,brand_i
 INSERT INTO product(id,name,price,discount,category_id,description,image,brand_id,stock) VALUES (8,'Procesador AMD-RYZEN 9-5950X',1969000,20,2,'Este procesador ws ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución, tiene memoria caché de 64 MB, rápida y volátil. Soporta memoria RAM DDR4, su potencia es de 105 W.Cuenta con 24 hilos que favorecen la ejecución de múltiples programas a la vez.','AMD-RYZEN-9-5950X.png',1,NULL);
 
 INSERT INTO `purchase`(`id`, `date`, `number`, `user_id`, `domicilio`) VALUES (1, '2022-08-21 21:18:33', 1, 1, 'Cochabamba 310');
-INSERT INTO `purschase_detail`(`id`, `compra_id`, `product_id`, `amount`, `priceUnit`, `priceTotal`) VALUES (1, 1, 1, '1', '629900,00', '629900,00');
 INSERT INTO `purchase`(`id`, `date`, `number`, `user_id`, `domicilio`) VALUES (2, '2022-08-21 21:18:33', 1, 1, 'Lomas 100');
-INSERT INTO `purschase_detail`(`id`, `compra_id`, `product_id`, `amount`, `priceUnit`, `priceTotal`) VALUES (1, 1, 1, '1', '629900,00', '629900,00');
 INSERT INTO `purchase`(`id`, `date`, `number`, `user_id`, `domicilio`) VALUES (3, '2022-08-21 21:18:33', 1, 1, 'Dean funes 333');
 INSERT INTO `purschase_detail`(`id`, `compra_id`, `product_id`, `amount`, `priceUnit`, `priceTotal`) VALUES (1, 1, 1, '1', '629900,00', '629900,00');
+INSERT INTO `purschase_detail`(`id`, `compra_id`, `product_id`, `amount`, `priceUnit`, `priceTotal`) VALUES (2, 1, 1, '1', '629900,00', '629900,00');
+INSERT INTO `purschase_detail`(`id`, `compra_id`, `product_id`, `amount`, `priceUnit`, `priceTotal`) VALUES (3, 1, 1, '1', '629900,00', '629900,00');

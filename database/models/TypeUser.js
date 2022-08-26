@@ -1,16 +1,16 @@
-const sequelize = require("sequelize");
+module.exports = (sequelize, DataTypes) => {
+  const TypeUser = sequelize.define(
+    "TypeUser",
+    {
+      id: {
+        primaryKey: true,
+        autoIncrement: true,
+        type: DataTypes.BIGINT(11),
+      },
 
-module.exports = (sequelize, dataType) => {
-const TypeUser = sequilize.define ('TypeUser',{
-    id:{
-    primaryKey: true,
-    autoIncrement: true,
-    type: DataTypes.INTERGER(11)
-    },
-
-    name:{
-    type: dataType.VARCHAR(255)    
-    },
+      name: {
+        type: DataTypes.STRING(255),
+      },
 
     state:{
     type: dataType.VARCHAR(255)

@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-
+const db = require("../database/models");
 const productsFilePath = path.join(
   __dirname,
   "../src/data/productsDataBase.json"
@@ -9,23 +9,26 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8")); // Conv
 
 let controller = {
   index: function (req, res) {
-    let listProduct = products;
-    res.render("home", { listProduct });
+    db.Product.findAll().then((listProduct) => {
+      res.render("home", { listProduct });
+    });
   },
   store: function (req, res) {
-    let newProduct = {
-      id: req.body.id,
-      name: req.body.name,
-      description: req.body.description,
-      price: parseInt(req.body.price),
-      discount: parseInt(req.body.discount),
-      category: req.body.category,
-      image: req.file.filename
-    };
-    products.push(newProduct);
-    let jsonProduct = JSON.stringify(products);
-    fs.writeFileSync(productsFilePath, jsonProduct); //Reemplaza el archivo JSON anterior por el que tiene el nuevo producto
-    res.redirect('/home');
+    console.log(req.body)
+    db.Product.create(
+      {
+        name: req.body.name,
+        description: req.body.description,
+        price: parseInt(req.body.price),
+        discount: parseInt(req.body.discount),
+        category_id: req.body.category_id,
+        stock: req.body.stock,
+        brand_id: req.body.brand_id,
+        image: req.file.filename
+      }
+    ).then(() => {
+      res.redirect("/home");
+    })
   },
   create: function (req, res) {
     res.render("./product/create");
@@ -35,46 +38,59 @@ let controller = {
      * Filtro por el producto seleccionado
      * Y envio un listado de los productos en oferta
      */
-    let product = products.find((x) => x.id == req.params.id);
-    let listProduct = products.filter((x) =>  x.category === "new-product");
+    let listProduct = db.Product.findAll({
+      where: {
+        category_id: 2,
+      },
+      limit: 3,
+    })
+    .then(() => {
+    })
+    .then((res) => {
+      return res;
+    });
 
-    res.render("./product/productDetail", { product, listProduct });
+    db.Product.findByPk(req.params.id).then((product) => {
+      res.render("./product/productDetail", { product, listProduct });
+    });
   },
   productCart: (req, res) => {
     res.render("./product/productCart");
   },
   delete: (req, res) => {
-    let id = req.params.id;
-    let arrayProduct = products.filter((x) => x.id != id);
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(arrayProduct)); //Reemplaza el archivo JSON anterior por el nuevo producto
-    let listProduct = products;
-    res.render("home", { listProduct });
+    db.Product.destroy({where: {id: req.params.id}, force: true})
+    .then(()=>{
+      return res.redirect('/home')})
+    .catch(error => res.send(error))
   },
-  edit: (req, res) =>{
-    let id = req.params.id;
-    let product = products.find((x) => x.id == id);
-    res.render("./product/edit", { product });
+  edit: (req, res) => {
+    db.Product.findByPk(req.params.id).then((product) => {
+      res.render("./product/edit", { product });
+    });
   },
   update: (req, res) => {
-    let id = req.params.id;
-    let product = products.find((x) => x.id == id);
-    let index = products.indexOf((x) => x.id == id);
-
-    product.name = req.body.name;
-    product.description = req.body.description;
-    product.price = req.body.price;
-    product.discount = req.body.discount;
-    product.category = req.body.category;
-    
-    products[index] = product;
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(products)); //Reemplaza el archivo JSON anterior por el nuevo producto
-    let listProduct = products;
-    res.render("home", { listProduct });
-    res.send("esto es update");
-  }
-
+    let productId = req.params.id;
+    console.log(req.file);
+    db.Product.update(
+      {
+        name: req.body.name,
+        description: req.body.description,
+        price: parseInt(req.body.price),
+        discount: parseInt(req.body.discount),
+        category_id: req.body.category_id,
+        stock: req.body.stock,
+        brand_id: req.body.brand_id,
+        image: req.file.filename
+      },
+      {
+        where: { id: productId },
+      }
+    )
+      .then(() => {
+        return res.redirect("/home");
+      })
+      .catch((error) => res.send(error));
+  },
 };
 
 module.exports = controller;

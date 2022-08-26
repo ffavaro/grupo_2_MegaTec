@@ -1,47 +1,63 @@
 <html lang="en">
+
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/styles-create-product.css">
+        <link rel="stylesheet" href="/css/styles-create-product.css">
 </head>
+
 <body>
-    <%- include('../partials/header') %>       
-    <main class="Formulario">
-        <form accion="/product/create" enctype="multipart/form-data" method="POST"  class="Formulario-de-edicion" x>
-                <h1><p>ALTA DEL PRODUCTO</p></h1>
-            <fieldset>
-                <legend>Id del Producto</legend>
-                <p><input type="text" name="id" id="id" placeholder="Ejm: 15, 16.." ></p>
-            </fieldset>
-            <fieldset>
-                <legend>Nombre del Producto</legend>
-                <p><input type="text" name="name" id="name" placeholder="Procesador Intel Core i5"></p>
-            </fieldset>
-            <fieldset>
-                <legend>Descripción</legend>
-                <p><input type="text" name="description" id="description" placeholder="Este procesador ofrece más espacio en caché y la arquitectura ...." ></p>
-            </fieldset>
-            <fieldset>
-                <legend>Precio</legend>
-                <input type="number" name="price" id="price" placeholder="1499000" >
-            </fieldset>
-            <fieldset>
-                <legend>Descuento</legend>
-                <input type="number" name="discount" id="discount" placeholder="10" >
-            </fieldset>
-            <fieldset>
-                <legend>Categoría</legend>
-                <input type="text" name="category" id="category" placeholder=in-offer/new-product>
+    <%- include('../partials/header') %>
+        <main class="Formulario">
+            <form accion="/product/create" enctype="multipart/form-data" method="POST" class="Formulario-de-edicion" x>
+                <h1>
+                    <p>ALTA DEL PRODUCTO</p>
+                </h1>
+                <fieldset>
+                    <legend>Nombre del Producto</legend>
+                    <p><input type="text" name="name" id="name" placeholder="Procesador Intel Core i5"></p>
                 </fieldset>
-            <fieldset>
-                 <legend>Imagen del Producto</legend>
-                <input type="file" name="image" id="image">
-            </fieldset>
-            <div class="botones">
-                <div class="reset"><input type="reset"></div>
-                <div class="enviar"><input type="submit"></div>
-            </div>
-        </form>
-    </main>
-    <%- include('../partials/footer')%>
+                <fieldset>
+                    <legend>Descripción</legend>
+                    <p><input type="text" name="description" id="description"
+                            placeholder="Este procesador ofrece más espacio en caché y la arquitectura ...."></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Precio</legend>
+                    <input type="number" name="price" id="price" placeholder="1499000">
+                </fieldset>
+                <fieldset>
+                    <legend>Descuento</legend>
+                    <input type="number" name="discount" id="discount" placeholder="10">
+                </fieldset>
+                <fieldset>
+                    <legend>Stock</legend>
+                    <input type="number" name="stock" id="stock" placeholder="10">
+                </fieldset>
+                <fieldset>
+                    <legend>Categoría</legend>
+                    <select name="category_id" id="category_id">
+                        <option value="1">En Oferta</option>
+                        <option value="2">Nuevo</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Marca</legend>
+                    <select name="brand_id" id="brand_id">
+                        <option value="1">AMD</option>
+                        <option value="2">INTEL</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Imagen del Producto</legend>
+                    <input type="file" name="image" required id="image">
+                </fieldset>
+                <div class="botones">
+                    <div class="reset"><input type="reset"></div>
+                    <div class="enviar"><input type="submit"></div>
+                </div>
+            </form>
+        </main>
+        <%- include('../partials/footer')%>
 </body>
+
 </html>
