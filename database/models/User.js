@@ -32,11 +32,22 @@ const User = sequelize.define  ( 'User', {
     },
 
     type_id:{
-    foreingKey: true, //Preguntar si esto se pone
     type: DataTypes.INTERGER(11)
     }
 },{
     timestamps: false
 })
-return User
-};
+
+    User.associate = function(models){
+        User.hasMany(models.Purchase,{
+            as:"purchases",
+            foreignKey: "user_id"
+        });
+
+        User.belongsTo(models.TypeUser, {
+            as:"type",
+            foreignKey: "user_id"
+        });
+}
+    return User
+}

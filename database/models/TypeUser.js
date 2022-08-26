@@ -20,5 +20,14 @@ const TypeUser = sequilize.define ('TypeUser',{
 {
     timestamps: false
 })
+
+        TypeUser.associate = function(models){
+        TypeUser.hasMany(models.User,{
+            as:"users",
+            foreignKey: "type_id"
+        });
+    }
+
 return TypeUser
+
 };

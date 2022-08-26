@@ -9,12 +9,10 @@ const PurchaseDetail = sequilize.define ('PurchaseDetail',{
     },
 
     purchase_id:{
-    foreingKey: true, //Preguntar si esto se pone
     type: DataTypes.INTERGER(11)
     },
 
     product_id:{
-    foreingKey: true, //Preguntar si esto se pone
     type: DataTypes.INTERGER(11)
     },
 
@@ -34,5 +32,19 @@ const PurchaseDetail = sequilize.define ('PurchaseDetail',{
 {
     timestamps: false
 })
+
+    PurchaseDetail.associate = function(models){
+        PurchaseDetail.belongsTo(models.Purchase,{
+            as:"purchase",
+            foreignKey: "detail_id"
+        });
+
+        // PurchaseDetail.belongsToMany(models.Product, {
+        //     as:"type",
+        //     foreignKey: "user_id"
+        // });
+    }
+
 return PurchaseDetail
+
 };

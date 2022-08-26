@@ -29,5 +29,14 @@ const Purchase = sequilize.define ('Purchase',{
 {
     timestamps: false
 })
-return Purchase
+
+    Purchase.associate = function(models){
+        Purchase.belongsTo(models.User,{
+            as:"user",
+            foreignKey: "purchase_id"
+        });
+    }
+    
+    return Purchase
+    
 };
