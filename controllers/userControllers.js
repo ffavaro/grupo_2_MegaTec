@@ -44,14 +44,15 @@ let controller = {
       },
   store: function (req, res) {
     let hash = bcrypt.hashSync(req.body.password, 10);
+    console.log(req.body)
     db.User.create(
       {
       firstname: req.body.name,
       lastname: req.body.lastname,
       email: req.body.email,
       password: hash,
-      category: req.body.category,
       image: req.file.filename,
+      type_id: req.body.type
       }
     ).then(() =>{
       res.redirect("/")
@@ -60,12 +61,12 @@ let controller = {
   update: (req, res) => {
     db.User.update(
       {
-      firstname: req.body.name,
-      lastname: req.body.lastname,
-      email: req.body.email,
-      password: hash,
-      category: req.body.category,
-      image: req.file.filename,
+        firstname: req.body.name,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        password: hash,
+        image: req.file.filename,
+        type_id: req.body.type
       },
       {
         where:{ 
