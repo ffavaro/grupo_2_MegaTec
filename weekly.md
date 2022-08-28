@@ -87,3 +87,33 @@ Actualicé el archivo retro con lo  hablado y hecho en la reunión anterior, al 
 Cree la carpeta middleware donde incluí los métodos que se encargan de hacer las rutas accesibles de acuerdo a si el usuario está o no logueado. También realicé la implementación de recordar al usuario.
 ### Clara
 Termine de hacer la implementación del login y de actualizar el archivo weekly.md con las reuniones realizadas. 
+
+
+# SPRINT 6
+
+## Weekly - 03 de Agosto de 2022
+En está reunión se realizó un retrospectiva del Sprint 5, y se dío inicio a la planificación del Sprint 6, se realizó la primera actvidad que fue actualizar el tablero de trello, en el cual definimos cada actividad, las especificaciones y entregables correspondientes, posteriormente dividimos estas actividades  entre los integrates del grupo.
+
+## Weekly -10 de Agosto de 2022
+
+### Clara
+Hice el diagrama relacional de la base de datos de Megatec de acuerdo a los estructura ya antes acordada.
+### Francisco
+Creé la base de datos y agregue el archivo script structure.sql que permite crear la base de datos completa, instale sequileze y realiza la configuración correspondiente.
+
+## Weekly -18 de Agosto de 2022
+
+### Clara 
+Realice la creación de los modelos de acurdo a la base de datos ya creada al igual que las asociaciones correspondientes.
+### Francisco
+De igual forma realicé la creación de lo modelos que me correspondian y empecé a trabajar en el CRUD  de productos.
+
+## Weekly -27 de Agosto de 2022
+
+### Clara
+Terminé la implementación de CRUD en usuarios, y consulte con Framcisco algunas dudas que tenia sobre las asociaciones de las tablas de Productos, Compras y Detalle de Compra. Me falta complementar al archivo weekly con las ultimas reuniones. 
+
+### Francisco
+Terminé la implementación de CRUD, me hace falta subir unos cambios y listo.
+
+Se programá reunión para mañana 28 de Agosto para revisar que todo este completo y funcionando bien para dar por dinalizado el Sprint 6.

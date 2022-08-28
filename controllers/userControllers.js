@@ -1,8 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-const usersFilePath = path.join(__dirname, "../src/data/users.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8")); // Convierte el JSON en un array de objetos literales
-
+const db = require("../database/models");
 const bcrypt = require("bcrypt");
 
 let controller = {
@@ -12,54 +10,79 @@ let controller = {
   singIn: function (req, res) {
     res.render("./users/singIn");
   },
-   loginProcess: async function (req, res) {
-    let userFound = users.find((oneUser) => oneUser.email === req.body.email);
-    
-    if (userFound) {
-      let password = req.body.password;
 
-      if ( bcrypt.compareSync(password,userFound.password)) 
-      {
-        if (req.body.recordarme == "on") res.cookie("user", userFound);
-            req.session.userLogged = userFound;
-        return res.redirect("profile");
-      }
-
-      return res.render("./users/singIn", {
-        errors: {
-          password: {
-            msg: "Constraseña Inválida",
-          },
-        },
-      });
-    }
-    return res.render("./users/singIn", {
-      errors: {
-        email: {
-          msg: "email no registrado",
-        },
+  loginProcess: function (req,res) {
+    db.User.findOne ({
+      where: {
+        email: req.body.email}, raw: true
+      })
+    .then(user => { 
+      if (user){
+        let password = req.body.password;
+            if (bcrypt.compareSync(password, user.password)) {
+              if (req.body.recordarme == "on") res.cookie("user", user);
+              req.session.userLogged = user;
+              return res.redirect("profile");
+            }
+      
+            return res.render("./users/singIn", {
+              errors: {
+                password: {
+                  msg: "Constraseña Inválida",
+                },
+              },
+            });
+          }
+          return res.render("./users/singIn", {
+            errors: {
+              email: {
+                msg: "email no registrado",
+              },
+            },
+          })
+        })
       },
-    });
-  },
-  store: (req, res) => {
+  store: function (req, res) {
     let hash = bcrypt.hashSync(req.body.password, 10);
-    let newUser = {
-      id: req.body.id,
+    db.User.create(
+      {
       firstname: req.body.name,
-      lastname: req.body.description,
+      lastname: req.body.lastname,
       email: req.body.email,
       password: hash,
       category: req.body.category,
       image: req.file.filename,
-    };
-    users.push(newUser);
-    let jsonProduct = JSON.stringify(users);
-    fs.writeFileSync(usersFilePath, jsonProduct); //Reemplaza el archivo JSON anterior por el nuevo producto
-    res.redirect("/");
+      }
+    ).then(() =>{
+      res.redirect("/")
+    })
   },
+  update: (req, res) => {
+    db.User.update(
+      {
+      firstname: req.body.name,
+      lastname: req.body.lastname,
+      email: req.body.email,
+      password: hash,
+      category: req.body.category,
+      image: req.file.filename,
+      },
+      {
+        where:{ 
+          id : (req.session.userLogged).id
+      },
+    })
+      .then(() => {
+        return res.redirect("./users/profile");
+      })
+      .catch((error) => res.send(error));
+  },
+
   profile: (req, res) => {
     return res.render("./users/profile", { usuario: req.session.userLogged });
   },
+
+
 };
 
 module.exports = controller;

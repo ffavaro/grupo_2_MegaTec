@@ -1,3 +1,6 @@
+const Product = require("./Product");
+const Purchase = require("./Purchase");
+
 module.exports = (sequelize, DataTypes) => {
   const PurchaseDetail = sequelize.define(
     "PurchaseDetail",
@@ -32,19 +35,14 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
-  
-    PurchaseDetail.associate = function(models){
-        PurchaseDetail.belongsTo(models.Purchase,{
-            as:"purchase",
-            foreignKey: "detail_id"
-        });
 
-        // PurchaseDetail.belongsToMany(models.Product, {
-        //     as:"type",
-        //     foreignKey: "user_id"
-        // });
-    }
+  PurchaseDetail.associate = function(models){
+    PurchaseDetail.belongsTo(models.Product,{
+        as:"detailProduct",
+        foreignKey: "product_id"
+    }) 
 
 return PurchaseDetail;
 
 };
+}
