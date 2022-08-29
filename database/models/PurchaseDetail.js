@@ -12,11 +12,11 @@ module.exports = (sequelize, DataTypes) => {
       },
 
       purchase_id: {
-            type: DataTypes.BIGINT(11),
+        type: DataTypes.BIGINT(11),
       },
 
       product_id: {
-            type: DataTypes.BIGINT(11),
+        type: DataTypes.BIGINT(11),
       },
 
       amount: {
@@ -36,13 +36,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  PurchaseDetail.associate = function(models){
-    PurchaseDetail.belongsTo(models.Product,{
-        as:"detailProduct",
-        foreignKey: "product_id"
-    }) 
-
-return PurchaseDetail;
-
+  PurchaseDetail.associate = function (models) {
+    PurchaseDetail.belongsTo(models.Product, {
+      as: "detailProduct",
+      foreignKey: "product_id",
+    });
+  };
+  
+  return PurchaseDetail;
 };
-}

@@ -1,6 +1,6 @@
 const sequelize = require("sequelize");
 
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define(
         "User",
         {
@@ -10,11 +10,11 @@ module.exports = (sequelize, dataTypes) => {
             type: DataTypes.BIGINT(11),
         },
     
-        first_name: {
+        firstname: {
             type: DataTypes.STRING(255),
         },
     
-        last_name: {
+        lastname: {
             type: DataTypes.STRING(255),
         },
     
@@ -39,7 +39,7 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     })
 
-    User.associate = function(models){
+   User.associate = function(models){
         User.hasMany(models.Purchase,{
             as:"purchases",
             foreignKey: "user_id"
@@ -50,5 +50,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "type_id"
         });
     }
-    return User
+    return User;
 }
