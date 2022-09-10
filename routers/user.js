@@ -33,6 +33,9 @@ router.get('/login', userMiddleware.redirectProfile, userControllers.singIn);
 router.post('/login', userControllers.loginProcess);
 // Vista profile
 router.get('/profile', userControllers.profile); 
+/*User edit */
+router.get('/edit/:id',  userMiddleware.withUser, userControllers.edit);
+router.post('/edit/:id', userMiddleware.withUser, uploadFile.single('image'), userControllers.update);
 
 router.post('/new', uploadFile.single('avatar'), userControllers.store)
 

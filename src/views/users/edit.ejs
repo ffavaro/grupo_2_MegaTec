@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="/css/styles-register.css" rel="stylesheet">
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+        <main class="conteiner">
+            <form accion="/user/edit/<%= user.id %>?_method=PUT" class="myForm" enctype="multipart/form-data" method="post">
+
+                <div class="contact">
+                    <article>
+                        <h2>Editar Usuario</h2>
+                    </article>
+                    <article>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" value= "<%= user.firstname %>"  required
+                            maxlength="20">
+                    </article>
+                    <article>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="lastname" name="lastname" value= "<%= user.lastname %>" required
+                            maxlength="20">
+                    </article>
+                    <article>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"value= "<%= user.email %>" required
+                            maxlength="30">
+
+                    </article>
+
+                    <article>
+                        <label for="name">Password</label>
+                        <input type="password" id="password" name="password" value= "<%= user.password %>" required
+                            maxlength="10">
+                    </article>
+                    <article>
+                        <legend>Categoría</legend>
+                        <select name="type" id="type">
+                            <option value="1">Usuario</option>
+                            <option value="2">Vendedor</option>
+                        </select>
+                    </article>
+                    <article>
+                        <label for="avatar">Avatar</label>
+                        <img src="/images/<%= user.image %> " alt="<%= user.name %> "> </img>
+                        <input type="file" name="avatar" id="avatar" accept=".jpg, .png">
+                    </article>
+                    
+                    <article>
+                        <button type="submit">Guardar</button>
+                        <button type="reset">Limpiar</button>
+                    </article>
+                </div>
+            </form>
+        </main>
+        <%- include('../partials/footer')%>
+</body>
+
+</html>

@@ -58,7 +58,13 @@ let controller = {
       res.redirect("/")
     })
   },
+  edit: (req, res) => {
+    db.User.findByPk(req.params.id).then((user) => {
+      res.render("./users/edit", { user });
+    });
+  },
   update: (req, res) => {
+    let hash = bcrypt.hashSync(req.body.password, 10);
     db.User.update(
       {
         firstname: req.body.name,
