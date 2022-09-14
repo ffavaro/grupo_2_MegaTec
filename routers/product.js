@@ -9,6 +9,7 @@ const validations = [];
 const multer =require('multer');
 // Middleware
 const userMiddleware = require('../middleware/userMiddleware');
+const { productValidator } = require('../middleware/productValidator');
 
 var storage = multer.diskStorage({
 	destination: (req, file, cb) => {
@@ -33,7 +34,7 @@ router.get('/productCart', userMiddleware.withUser, productControllers.productCa
 // Creación de productos GET y envío de información POST
 // La ruta completa es /product/create, porque en app.js ya está este prefijo
 router.get('/create', userMiddleware.withUser, productControllers.create);
-router.post('/create', userMiddleware.withUser, uploadFile.single('image'), productControllers.store);
+router.post('/create', productValidator , userMiddleware.withUser, uploadFile.single('image'), productControllers.store);
 
 /*Product detail */
 router.get('/:id', userMiddleware.allAccess, productControllers.detail);
