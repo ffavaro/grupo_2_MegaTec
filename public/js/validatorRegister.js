@@ -79,18 +79,18 @@ window.addEventListener("load", function() {
         password.addEventListener('blur', validatorPassword)
         avatar.addEventListener('change', validatorImage)
 
-        // form.addEventListener("submit", (e) => {
+        form.addEventListener("submit", (e) => {
             
 
-        // for(i=0; i<inputs.length;i++){
+        for(i=0; i<inputs.length;i++){
         
-        // if(inputs[i].classList.contains('invalid')){
+        if(inputs[i].classList.contains('invalid')){
             
-        // }else{
-        //     console.log("haciendo submit")
-        // }}
-        // e.preventDefault();    
-        // });
+        }else{
+            console.log("haciendo submit")
+        }}
+        e.preventDefault();    
+        });
 
 });
 
