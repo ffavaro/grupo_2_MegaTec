@@ -11,6 +11,7 @@ var cookieParser = require('cookie-parser');
 
 const usersApi = require("./routers/api/userApi");
 const productApi = require("./routers/api/productApi");
+const dashboard = require("./routers/api/dashboard");
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -39,6 +40,7 @@ app.use("/user", users);
 app.use("/product", product);
 app.use("/api/users", usersApi);
 app.use("/api/product", productApi);
+app.use("/api/dashboard", dashboard);
 
 app.use((req,res, next) =>{
     res.status(404).render("not-found")
