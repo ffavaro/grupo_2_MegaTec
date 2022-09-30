@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+ .invalid{
+    border: solid, red, 2px;
+    display: block;
+}
+
 .conteiner{
     display: flex;
     justify-content:center;
@@ -15,6 +20,10 @@
     padding: 1.8em;
 }
 
+.error{
+    color: #8b0000;
+    display: block;
+}
 
 .contact {
     margin-top: 50px;
@@ -47,6 +56,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+
 
 @media (min-width:360px) {
     * {

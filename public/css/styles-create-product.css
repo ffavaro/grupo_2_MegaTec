@@ -32,12 +32,19 @@ p{
 input[type="text"],[type="number"] {
     text-align: center;
     background-color: white;
-    width: 600px;
+    width: 780px;
     padding: 8px;
     font-size: 18px;
     border: none;
     border-bottom: 2px solid gray;
 }
+span{
+    color: #8b0000
+
+}
+.invalid{border: solid 3px red;
+    box-shadow: #8b0000 0, 0, 10px;
+};
 
 input[type="file"] {
 padding-bottom: 15px;
@@ -53,6 +60,9 @@ legend {
 }
 input{
     background-color: #ebebeb;
+};
+span {
+    color: red
 }
 
 .botones{

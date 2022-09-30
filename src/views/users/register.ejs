@@ -9,36 +9,37 @@
 <body>
     <%- include('../partials/header') %>
         <main class="conteiner">
-            <form action="/user/new" class="myForm" enctype="multipart/form-data" method="post">
-
+            <form action="/user/new" id="form" class="myForm" enctype="multipart/form-data" method="post">
                 <div class="contact">
                     <article>
                         <h2>Nuevo Usuario</h2>
-                        <div class="errores">
-                            <ul></ul>
+                        <div >
+                            <ul id="ulerrores">
+                            </ul>
                         </div>
                     </article>
                     <article>
                         <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required
-                            maxlength="20">
+                        <input type="text" id="nombre" name="name" placeholder="Ingrese su nombre" >
+                        <span class="error"></span>
+                        <p class="avisoName"></p>
                     </article>
                     <article>
                         <label for="apellido">Apellido</label>
-                        <input type="text" id="lastname" name="lastname" placeholder="Ingrese su apellido" required
-                            maxlength="20">
+                        <input type="text" id="lastname" name="lastname" placeholder="Ingrese su apellido" >
+                        <span class="error"></span>
+                        <p class="avisoLastName"></p>
                     </article>
                     <article>
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Ingrese su email" required
-                            maxlength="30">
-
+                        <input type="email" id="email" name="email" placeholder="Ingrese su email">
+                        <span class="error"></span>
                     </article>
 
                     <article>
                         <label for="name">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Ingrese su Password" required
-                            maxlength="20">
+                        <input type="password" id="password" name="password" placeholder="Ingrese su Password" >
+                        <span class="error"></span>
                     </article>
                     <article>
                         <legend>Categoría</legend>
@@ -49,17 +50,18 @@
                     </article>
                     <article>
                         <label for="avatar">Avatar</label>
-                        <input type="file" name="avatar" id="avatar" accept=".jpg, .png">
+                        <input type="file" name="avatar" id="avatar">
+                        <span class="error"></span>
                     </article>
                     
                     <article>
-                        <button type="submit">Guardar</button>
+                        <button type="submit" id ="submit">Guardar</button>
                         <button type="reset">Limpiar</button>
                     </article>
                 </div>
             </form>
         </main>
-        <script src ="/js/validator.js"></script>
+        <script src ="/js/validatorRegister.js"></script>
         <%- include('../partials/footer')%>
 </body>
 

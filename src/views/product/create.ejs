@@ -14,12 +14,12 @@
                 </h1>
                 <fieldset>
                     <legend>Nombre del Producto</legend>
-                    <p><input type="text" name="name" id="name" placeholder="Procesador Intel Core i5"></p>
+                    <p><input type="text" name="name" id="name" placeholder="Procesador Intel Core i5"> <span class=" error"> </span></p>
                 </fieldset>
                 <fieldset>
                     <legend>Descripción</legend>
                     <p><input type="text" name="description" id="description"
-                            placeholder="Este procesador ofrece más espacio en caché y la arquitectura ...."></p>
+                            placeholder="Este procesador ofrece más espacio en caché y la arquitectura ...." > </p>
                 </fieldset>
                 <fieldset>
                     <legend>Precio</legend>
@@ -57,6 +57,7 @@
                 </div>
             </form>
         </main>
+        <script src ="/js/validatorCreateProduct.js"></script>
         <%- include('../partials/footer')%>
 </body>
 

@@ -80,3 +80,13 @@ Seguir trabajando en equipo, apoyandonos y llegar con éxito al final de cada Sp
 Algunas actividades a las corridas o correcciones,
 ### Empezar hacer:
 Trabajar con ramas, para evitar tener tantos conflictos al momento de subir los cambio.
+
+
+
+
+
+
+
+
+
+
