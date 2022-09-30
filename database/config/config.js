@@ -3,24 +3,24 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "megateg_db",
-    "host": "127.0.0.1",
+    "database": "megatec_db",
+    "host": "localhost",
     "dialect": "mysql",
   
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "metgateg_db",
-    "host": "127.0.0.1",
+    "database": "megatec_db",
+    "host": "localhost",
     "dialect": "mysql",
     
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "megateg_db",
-    "host": "127.0.0.1",
+    "database": "megatec_db",
+    "host": "localhost",
     "dialect": "mysql",
   }
 }

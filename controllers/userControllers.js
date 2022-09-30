@@ -1,7 +1,6 @@
-const path = require("path");
-const fs = require("fs");
 const db = require("../database/models");
 const bcrypt = require("bcrypt");
+const { body, validationResult } = require('express-validator');
 
 let controller = {
   register: function (req, res) {
@@ -12,6 +11,21 @@ let controller = {
   },
 
   loginProcess: function (req,res) {
+    /* body('email').isEmail()
+    body('email').custom(value => {
+      return db.User.findOne({where: {
+        email: value}, raw: true }).then(user => {
+        if (!user) {
+          return Promise.reject('E-mail inexistente');
+        }
+      });
+    })
+
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    } */
+
     db.User.findOne ({
       where: {
         email: req.body.email}, raw: true
@@ -44,7 +58,7 @@ let controller = {
       },
   store: function (req, res) {
     let hash = bcrypt.hashSync(req.body.password, 10);
-    console.log(req.body)
+
     db.User.create(
       {
       firstname: req.body.name,

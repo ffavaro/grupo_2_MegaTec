@@ -81,12 +81,35 @@ Algunas actividades a las corridas o correcciones,
 ### Empezar hacer:
 Trabajar con ramas, para evitar tener tantos conflictos al momento de subir los cambio.
 
+# SPRINT 6
 
+## Breve retrospectiva
+Culminamos con éxito el Sprint #6, y realizamos una retrospectiva basada en la Estrella de Mar llegamos a las siguientes conclusiones:
+### Seguir haciendo:
+Entregar a tiempo las actividades de los Sprint, seguir mejorando la comunicación grupal.
+Mejor nuevamente el tema de hacer meet y juntarse para organizar el sprint.
+### Menos de:
+Llegar con el tiempo justo para realizar las actividades del sprint y las opcionales. 
+De dejar las actividades para ultimo dia y no juntarse para organizar el sprint
+### Más de:
+Seguir trabajando en equipo, apoyandonos y llegar con éxito al final de cada Sprint.
+### Dejar de hacer:
+Algunas actividades a las corridas o correcciones. 
+Dejar de posterjar las reuniones
+### Empezar hacer:
+Tener mas comunicacion para mejorar el trabajo en equipo.
 
+# SPRINT 7
 
-
-
-
-
-
-
+## Breve retrospectiva
+Culminamos con éxito el Sprint #7, y realizamos una retrospectiva basada en la Estrella de Mar llegamos a las siguientes conclusiones:
+### Seguir haciendo:
+Trabajando en equipo para llegar bien y atiempo con las activodades propuestas para cada Sprint.
+### Menos de:
+Postergar las tareas para el final de la fecha de entrega del Sprint, para poder cumplir con todos los requisitos.
+### Más de:
+Seguir trabajando en equipo, apoyandonos y llegar con éxito al final de cada Sprint.
+### Dejar de hacer:
+Bajar la comunicaión del grupo y no hacer las reuniones semanales para revisar el avance del proyecto.
+### Empezar hacer:
+Ir puliendo el proyecto para tenerlo a tiempo al final de la cursada.

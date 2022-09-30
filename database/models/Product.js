@@ -13,32 +13,35 @@ module.exports = (sequelize, DataTypes) => {
       name: {type :DataTypes.STRING(255)},
       price: { type: DataTypes.DECIMAL(11)},
       discount: { type: DataTypes.BIGINT(11)},
-      category_id:{type :DataTypes.BIGINT(255)},
-      brand_id: {type :DataTypes.BIGINT(255)},
+      category_id:{type :DataTypes.BIGINT(255),
+        references: {
+            model: Category,
+            key: "category_id"
+        }},
+      brand_id: {type :DataTypes.BIGINT(255),
+        references: {
+          model: Brand,
+          key: "Brand"
+      }},
       stock: {type :DataTypes.BIGINT(255)},
       description: {type :DataTypes.STRING(255)},
       image: {type :DataTypes.STRING(255)},
     },
     {
-      timestamps: false,
-
+      timestamps: false,      
+      tableName: 'products'
     }
   );
 
- 
- Product.associate = function(models) {
-    Product.belongsTo(models.Category,{
-        as:"Category",
+  Product.associate = (models) => {
+    Product.belongsTo(models.Category, {
         foreignKey: "category_id"
     });
-  }
 
-  Product.associate = function(models){
-    Product.belongsTo(models.Brand,{
-        as:"Brand",
-        foreignKey: "brand_id"
-    });
+    Product.belongsTo(models.Brand, {foreignKey: "brand_id"});
   }
-  
+/* 
+  Product.associate = P
+  */ 
   return Product;
 }; 

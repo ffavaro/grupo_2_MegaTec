@@ -8,12 +8,7 @@ const path = require('path')
 const multer =require('multer');
 // Middleware
 const userMiddleware = require('../middleware/userMiddleware');
-const { redirectProfile } = require('../middleware/userMiddleware');
-
-const validations =[
-    body('email').notEmpty().withMessage('Ingresa tú correo electrónico').bail().isEmail().withMessage('Correo eléctronico no válido'),
-    body('password').notEmpty().withMessage('Ingresa tú contraseña')
-];
+const { validateUser } = require('../middleware/userValidator');
 
 var storage = multer.diskStorage({
 	destination: (req, file, cb) => {
@@ -37,6 +32,6 @@ router.get('/profile', userControllers.profile);
 router.get('/edit/:id',  userMiddleware.withUser, userControllers.edit);
 router.post('/edit/:id', userMiddleware.withUser, uploadFile.single('image'), userControllers.update);
 
-router.post('/new', uploadFile.single('avatar'), userControllers.store)
+router.post('/new', /* validateUser , */ uploadFile.single('avatar'), userControllers.store)
 
 module.exports = router;
