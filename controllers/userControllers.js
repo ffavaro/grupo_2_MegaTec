@@ -11,7 +11,7 @@ let controller = {
   },
 
   loginProcess: function (req,res) {
-    body('email').isEmail()
+    /* body('email').isEmail()
     body('email').custom(value => {
       return db.User.findOne({where: {
         email: value}, raw: true }).then(user => {
@@ -24,7 +24,7 @@ let controller = {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
-    }
+    } */
 
     db.User.findOne ({
       where: {

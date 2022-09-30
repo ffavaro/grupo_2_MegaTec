@@ -9,6 +9,8 @@ const product = require("./routers/product");
 const users = require("./routers/user");
 var cookieParser = require('cookie-parser');
 
+const usersApi = require("./routers/api/userApi");
+const productApi = require("./routers/api/productApi");
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -26,7 +28,6 @@ app.use(session(
         resave: false,
         saveUninitialized: false
     }
-
 ));
 //Views
 app.set('view engine', 'ejs');
@@ -36,6 +37,9 @@ app.set('views', './src/views');
 app.use("/", main);
 app.use("/user", users);
 app.use("/product", product);
+app.use("/api/users", usersApi);
+app.use("/api/product", productApi);
+
 app.use((req,res, next) =>{
     res.status(404).render("not-found")
 })

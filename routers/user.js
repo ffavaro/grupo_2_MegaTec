@@ -32,6 +32,6 @@ router.get('/profile', userControllers.profile);
 router.get('/edit/:id',  userMiddleware.withUser, userControllers.edit);
 router.post('/edit/:id', userMiddleware.withUser, uploadFile.single('image'), userControllers.update);
 
-router.post('/new', validateUser , uploadFile.single('avatar'), userControllers.store)
+router.post('/new', /* validateUser , */ uploadFile.single('avatar'), userControllers.store)
 
 module.exports = router;
