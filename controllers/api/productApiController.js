@@ -1,5 +1,5 @@
 const db = require("../../database/models");
-const Category = require("../../database/models/Category");
+const path = require('path');
 
 let controller = {
   /* 
@@ -89,8 +89,7 @@ let controller = {
    */
   getImageById: (req, res) => {
     db.Product.findByPk(req.params.id).then((data) => {
-      let path = `C:\\Users\\Francisco\\OneDrive\\Documentos\\Digital House\\MegaTec\\grupo_2_MegaTec\\public\\images\\product\\${data.image}`;
-      res.sendFile(path);
+      res.sendFile(path.join(__dirname, "../../public\\images\\product\\" + data.image));
     });
   },
 };

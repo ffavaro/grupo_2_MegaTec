@@ -20,27 +20,39 @@ let controller = {
   /** ○ Total de productos */
   getCountAllProduct: async (req, res) => {
     db.Product.findAll().then((product) => {
-      res.send(product.length);
+      let total = product.length
+      res.send({total});
     });
   },
   /** Total de usuarios */
   getCountAllUser: async (req, res) => {
     db.User.findAll().then((users) => {
-      res.send(users.length);
+      let total = users.length
+      res.send({total});
     });
   },
   /*○ Total de categorías*/
   getCountAllCategory: async (req, res) => {
     db.Category.findAll().then((Category) => {
-      res.send(Category.length);
+      let total = Category.length
+      res.send({total});
     });
   },
   /** ● Panel de detalle de último producto o usuario creado.*/
-  getLastProduct: async (req, res) => {},
-  getLastUser: async (req, res) => {},
+  getLastProduct: async (req, res) => {
+    db.Product.findAll({ limit: 1,order: [ [ 'id', 'DESC' ]]}).then((product) => {
+      res.send(product);
+    });
+  },
+   /** ● Panel de detalle de último producto o usuario creado.*/
+  getLastUser: async (req, res) => {
+    db.User.findAll({ limit: 1,order: [ [ 'id', 'DESC' ]]}).then((user) => {
+      res.send(user);
+    });
+  },
   /* ● Panel de categorías con el total de productos de cada una.*/
   getAllCategorWithProduct: async (res, req) => {
-
+    
   },
   /* ● Panel con el listado de productos. */
   getAllProduct: async (req, res) => {
