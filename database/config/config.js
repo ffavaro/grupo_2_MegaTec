@@ -5,8 +5,7 @@ module.exports = {
     "password": null,
     "database": "megatec_db",
     "host": "localhost",
-    "dialect": "mysql",
-  
+    "dialect": "mysql",  
   },
   "test": {
     "username": "root",
@@ -14,7 +13,6 @@ module.exports = {
     "database": "megatec_db",
     "host": "localhost",
     "dialect": "mysql",
-    
   },
   "production": {
     "username": "root",

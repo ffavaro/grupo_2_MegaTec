@@ -1,6 +1,5 @@
 const db = require("../../database/models");
 const path = require('path');
-const fs = require('fs');
 
 let controller = {
     /* 
@@ -51,9 +50,8 @@ let controller = {
         })
     },
     getAvatarById:(req, res) =>{
-        db.User.findByPk(req.params.id).then((user) => {
-            let path = `C:\\Users\\Francisco\\OneDrive\\Documentos\\Digital House\\MegaTec\\grupo_2_MegaTec\\public\\images\\user\\${user.image}`
-            res.sendFile(path);
+        db.User.findByPk(req.params.id).then((user) => { 
+            res.sendFile(path.join(__dirname, "../../public\\images\\user\\" + user.image));
         })
     }
 };

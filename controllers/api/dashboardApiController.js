@@ -44,6 +44,7 @@ let controller = {
       res.send(product);
     });
   },
+   /** ● Panel de detalle de último producto o usuario creado.*/
   getLastUser: async (req, res) => {
     db.User.findAll({ limit: 1,order: [ [ 'id', 'DESC' ]]}).then((user) => {
       res.send(user);
