@@ -5,44 +5,50 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 let userMiddleware = {
   verificationLogged: (req, res, next) => {
-    if (req.cookies.user != null) {
+    if (req.cookies.user != undefined) {
       let userFound = users.find(
         (oneUser) => oneUser.email === req.cookies.user.email
       );
       if (userFound) {
-        res.redirect("/home");
+        return res.redirect("/home");
       }
     }
-    if(req.session.userLogged  != null)
+    if(req.session.userLogged  != undefined)
     {
-      res.redirect("/home");
+      return  res.redirect("/home");
     }
 
     next();
   },
   allAccess: (req, res, next) => {
-    if (req.cookies.user != null) {
-      res.redirect("/home");
+    if (req.cookies.user === undefined) {
+      return res.redirect("/home");
     }
     next();
   },
   redirectProfile: (req, res, next) => {
-    if (req.cookies.user != null) {
-      res.redirect("/users/profile");
+    if (req.cookies.user != undefined) {
+      return res.redirect("/users/profile");
     }
 
-    if(req.session.userLogged  != null)
+    if(req.session.userLogged != undefined)
     {
-      res.redirect("/home");
+      return res.redirect("/home");
     }
     
     next();
   },
   withUser: (req, res, next) => {
-    if (req.session.userLogged === undefined || req.cookies.user === undefined) {
-      return res.redirect("/");
+    console.log(req.session.userLogged)
+    console.log( req.cookies.user)
+
+    if(req.session.userLogged !== undefined || req.cookies.user !== undefined)
+    {
+      next();
     }
-    next();
+    else if (req.session.userLogged === undefined && req.cookies.user === undefined) {
+        return res.redirect("/");
+    }
   },
 };
 

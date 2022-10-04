@@ -38,29 +38,11 @@ exports.validateUser = [
     .withMessage('Password invalida!')
     .bail(),
     check('avatar')
-    .notEmpty().withMessage("El avatar es requerido")
-    .custom({
-        isImage: function(value, filename) {
-
-            var extension = (path.extname(filename)).toLowerCase();
-            switch (extension) {
-                case '.jpg':
-                    return '.jpg';
-                case '.jpeg':
-                    return '.jpeg';
-                case  '.png':
-                    return '.png';
-                case  '.gif':
-                    return '.gif';
-                default:
-                    return false;
-            }
-        }
-    }),
+    .notEmpty().withMessage("El avatar es requerido"),
   (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty())
-      return res.status(422).json({errors: errors.array()});
+      res.render("./users/register",{errors:  errors.array()});
     next();
   },
 ];
