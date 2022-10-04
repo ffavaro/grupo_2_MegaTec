@@ -90,7 +90,7 @@ CREATE TABLE `purschase_detail`  (
   INDEX `fk_compra`(`compra_id`) USING BTREE,
   INDEX `fk_product`(`product_id`) USING BTREE,
   CONSTRAINT `fk_compra` FOREIGN KEY (`compra_id`) REFERENCES `purchase` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT `fk_product` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT `fk_product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------

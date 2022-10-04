@@ -2,14 +2,15 @@ const db = require("../database/models");
 const bcrypt = require("bcrypt");
 const { body, validationResult } = require('express-validator');
 
+const { validateUser } = require('../middleware/userValidator');
+
 let controller = {
   register: function (req, res) {
-    res.render("./users/register");
+    res.render("./users/register",{errors: []});
   },
   singIn: function (req, res) {
     res.render("./users/singIn");
   },
-
   loginProcess: function (req,res) {
     /* body('email').isEmail()
     body('email').custom(value => {
@@ -57,6 +58,7 @@ let controller = {
         })
       },
   store: function (req, res) {
+    validateUser;
     let hash = bcrypt.hashSync(req.body.password, 10);
 
     db.User.create(
@@ -102,7 +104,6 @@ let controller = {
   profile: (req, res) => {
     return res.render("./users/profile", { usuario: req.session.userLogged });
   },
-
 
 };
 

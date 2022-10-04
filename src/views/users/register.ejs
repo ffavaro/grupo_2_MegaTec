@@ -11,6 +11,15 @@
         <main class="conteiner">
             <form action="/user/new" id="form" class="myForm" enctype="multipart/form-data" method="post">
                 <div class="contact">
+                    <% if(errors.length > 0) { %>
+                        <ul>
+                        <% for( error of errors) { %>
+                            <li>
+                                <%= error.msg %>
+                            </li>
+                        <% } %>
+                        </ul>
+                    <% } %>
                     <article>
                         <h2>Nuevo Usuario</h2>
                         <div >

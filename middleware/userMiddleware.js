@@ -39,14 +39,8 @@ let userMiddleware = {
     next();
   },
   withUser: (req, res, next) => {
-    
-    if (req.cookies.user == null || req.cookies.user === undefined) {
-      res.redirect("/");
-    }
-
-    if(req.session.userLogged == null || req.cookies.userLogged === undefined)
-    {
-      res.redirect("/");
+    if (req.session.userLogged === undefined || req.cookies.user === undefined) {
+      return res.redirect("/");
     }
     next();
   },
