@@ -76,7 +76,7 @@ let controller = {
         discount: data.discount,
         category_id: data.Category,
         brand_id: data.Brand,
-        stock: data.tock,
+        stock: data.stock,
         description: data.description,
         image: `http://localhost:3000/api/product/image/${data.id}`,
       };
