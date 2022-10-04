@@ -39,9 +39,6 @@ let userMiddleware = {
     next();
   },
   withUser: (req, res, next) => {
-    console.log(req.session.userLogged)
-    console.log( req.cookies.user)
-
     if(req.session.userLogged !== undefined || req.cookies.user !== undefined)
     {
       next();

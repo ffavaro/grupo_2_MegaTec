@@ -40,14 +40,41 @@ let controller = {
   },
   /** ● Panel de detalle de último producto o usuario creado.*/
   getLastProduct: async (req, res) => {
-    db.Product.findAll({ limit: 1,order: [ [ 'id', 'DESC' ]]}).then((product) => {
+    db.Product.findAll({ limit: 1, order: [ [ 'id', 'DESC' ]]})
+    .then((data) => {
+      let product = null;
+      data.forEach((elem) => {
+        product = {
+          id: elem.id,
+          name: elem.name,
+          price: elem.price,
+          discount: elem.discount,
+          category_id: elem.Category,
+          brand_id: elem.Brand,
+          stock: elem.stock,
+          description: elem.description,
+          image: `http://localhost:3000/api/product/image/${elem.id}`,
+        };
+
+      });
       res.send(product);
     });
   },
    /** ● Panel de detalle de último producto o usuario creado.*/
   getLastUser: async (req, res) => {
-    db.User.findAll({ limit: 1,order: [ [ 'id', 'DESC' ]]}).then((user) => {
-      res.send(user);
+    db.User.findAll({ limit: 1,order: [ [ 'id', 'DESC' ]]})
+    .then((user) => {
+      let data = [];
+
+      user.forEach(element => {
+          let user = {name:"", email:"", avatar:""};
+          user.name = element.firstname + " - " + element.lastname;
+          user.email = element.email;
+          user.avatar = `http://localhost:3000/api/users/avatar/${element.id}`;
+          data.push(user);                
+      });
+
+      res.send({ data });
     });
   },
   /* ● Panel de categorías con el total de productos de cada una.*/
@@ -72,9 +99,29 @@ let controller = {
   },
   /* ● Panel con el listado de productos. */
   getAllProduct: async (req, res) => {
-    db.Product.findAll().then((product) => {
-      res.send(product);
+    let products = [];
+    db.Product.findAll()
+    .then((data) => {
+      data.forEach((elem) => {
+        let product = {
+          id: elem.id,
+          name: elem.name,
+          price: elem.price,
+          discount: elem.discount,
+          category_id: elem.Category,
+          brand_id: elem.Brand,
+          stock: elem.stock,
+          description: elem.description,
+          image: `http://localhost:3000/api/product/image/${elem.id}`,
+        };
+        products.push(product);
+      });
+
+      res.send(products);
     });
+    /* db.Product.findAll().then((product) => {
+      res.send(product);
+    }); */
   },
 };
 
