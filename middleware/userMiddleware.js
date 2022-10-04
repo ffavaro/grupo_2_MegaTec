@@ -39,10 +39,12 @@ let userMiddleware = {
     next();
   },
   withUser: (req, res, next) => {
-    if (req.cookies.user != null) {
+    
+    if (req.cookies.user == null || req.cookies.user === undefined) {
       res.redirect("/");
     }
-    if(req.session.userLogged  != null)
+
+    if(req.session.userLogged == null || req.cookies.userLogged === undefined)
     {
       res.redirect("/");
     }

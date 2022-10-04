@@ -51,8 +51,24 @@ let controller = {
     });
   },
   /* ● Panel de categorías con el total de productos de cada una.*/
-  getAllCategorWithProduct: async (res, req) => {
-    
+  getAllCategorWithProduct: async (req, res) => {
+    db.Product.findAll({
+      include: [{ model: db.Category, as: "Category" }],
+    }).then((product) => {
+      let json = { countByCategory: [] };
+      let countOffer = 0;
+      let countNew = 0;
+
+      product.forEach((elem) => {
+        if (elem.Category.dataValues.id === 1) countOffer++;
+        else countNew++;
+      });
+
+      json.countByCategory.push({ name: "En Oferta", countProduct: countOffer });
+      json.countByCategory.push({ name: "Nuevo", countProduct: countNew });
+
+      res.send({ json });
+    });
   },
   /* ● Panel con el listado de productos. */
   getAllProduct: async (req, res) => {

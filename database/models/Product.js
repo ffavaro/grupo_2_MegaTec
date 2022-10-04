@@ -40,8 +40,6 @@ module.exports = (sequelize, DataTypes) => {
 
     Product.belongsTo(models.Brand, {foreignKey: "brand_id"});
   }
-/* 
-  Product.associate = P
-  */ 
+  
   return Product;
 }; 
