@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    
 }
 
  .invalid{
@@ -11,11 +12,15 @@
     display: flex;
     justify-content:center;
     align-items:center;
+    /* background-color: #EAEBEC; */
+    background-image: url('../img/backgound.png'); 
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     
 }
 .myForm {
     display: flex;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 3px;
     padding: 1.8em;
 }
@@ -26,11 +31,19 @@
 }
 
 .contact {
-    margin-top: 50px;
+    margin-top: 10px;
+    color: white;
     flex: 1;
     order: 1;
     margin-right: 2em;
     justify-content: center;
+    background-image: linear-gradient(to right, #0860b3 0%, #0066ff 100%); 
+    padding: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1px solid blue;
+    border-radius: 2%;
+    
 }
 
 .contact input {
@@ -49,7 +62,7 @@
 }
 
 .contact button {
-    background: gray;
+    background: #A0A0A2;
     color: white;
     border: 0;
     border-radius: 10px;

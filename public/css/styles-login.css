@@ -58,6 +58,7 @@ main  {
 {
     align-content: stretch;
     border: 1px solid blue;
+    border-radius: 2%;
     width: 30%;
     text-align: center;
     margin: 0 auto;

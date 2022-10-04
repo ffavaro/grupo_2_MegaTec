@@ -78,19 +78,7 @@ window.addEventListener("load", function() {
         email.addEventListener('blur',validatorEmail)
         password.addEventListener('blur', validatorPassword)
         avatar.addEventListener('change', validatorImage)
-
-        form.addEventListener("submit", (e) => {
-            
-
-        for(i=0; i<inputs.length;i++){
         
-        if(inputs[i].classList.contains('invalid')){
-            
-        }else{
-            console.log("haciendo submit")
-        }}
-        e.preventDefault();    
-        });
 
 });
 
