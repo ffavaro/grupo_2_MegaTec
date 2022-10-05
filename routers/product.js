@@ -75,8 +75,8 @@ router.post('/create', userMiddleware.withUser, uploadFile.single('image'), prod
 router.get('/:id', userMiddleware.allAccess, productControllers.detail);
 
 /*Product edit */
-router.get('/edit/:id', /*  userMiddleware.withUser, */ productControllers.edit);
-router.post('/edit/:id', /* userMiddleware.withUser, */ uploadFile.single('image'), productValidate, productControllers.update);
+router.get('/edit/:id',  userMiddleware.withUser, productControllers.edit);
+router.post('/edit/:id', userMiddleware.withUser, uploadFile.single('image'), productValidate, productControllers.update);
 
 /**Delete  */
 router.delete('/delete/:id', userMiddleware.withUser, productControllers.delete);
