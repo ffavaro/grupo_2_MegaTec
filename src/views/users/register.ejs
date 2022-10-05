@@ -22,48 +22,48 @@
                         <label for="name">Nombre</label>
                         <input type="text" id="name" name="name" placeholder="Ingrese su nombre" 
                         value="<%= locals.old ? old.name : null %>" >
+                        <span class="error"></span>
+                        <p class="avisoName"></p>
                         <% if (locals.errors && errors.name) { %>
                             <div class="text-danger">
                                 <%= errors.name.msg %>
                             </div>
                         <% } %>
-                        <span class="error"></span>
-                        <p class="avisoName"></p>
                     </article>
                     <article>
                         <label for="apellido">Apellido</label>
                         <input type="text" id="lastname" name="lastname" placeholder="Ingrese su apellido"
                         value="<%= locals.old ? old.lastname : null %>" >
+                        <span class="error"></span>
+                        <p class="avisoLastName"></p>
                         <% if (locals.errors && errors.lastname) { %>
                             <div class="text-danger">
                                 <%= errors.lastname.msg %>
                             </div>
                         <% } %>
-                        <span class="error"></span>
-                        <p class="avisoLastName"></p>
                     </article>
                     <article>
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Ingrese su email"
                         value="<%= locals.old ? old.email : null %>" >
+                        <span class="error"></span>
                         <% if (locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
                             </div>
                         <% } %>
-                        <span class="error"></span>
                     </article>
 
                     <article>
                         <label for="name">Contraseña</label>
                         <input type="password" id="password" name="password" placeholder="Ingrese su Contraseña" 
                         value="<%= locals.old ? old.password : null %>">
+                        <span class="error"></span>
                         <% if(locals.errors && errors.password) { %>
                             <div class="text-danger">
                                 <%= errors.password.msg %>
                             </div>
                         <% } %>
-                        <span class="error"></span>
                     </article>
                     <article>
                         <legend>Categoría</legend>
@@ -75,12 +75,12 @@
                     <article>
                         <label for="avatar">Avatar</label>
                         <input type="file" name="avatar" value="<%= locals.old ? old.avatar : null %>" id="avatar">
+                        <span class="error"></span>
                         <% if(locals.errors && errors.avatar) { %>
                             <div class="text-danger">
                                 <%= errors.avatar.msg %>
                             </div>
                         <% } %>
-                        <span class="error"></span>
                     </article>
                     
                     <article>

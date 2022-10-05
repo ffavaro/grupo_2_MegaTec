@@ -63,7 +63,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>Imagen del Producto</legend>
-                    <input type="file" name="image" required id="image"><span class=" error"> </span>
+                    <input type="file" name="image" value="<%= locals.old ? old.avatar : null %>" required id="image"><span class=" error"> </span>
                     <% if (locals.errors && errors.image) { %>
                         <div class="text-danger">
                             <%= errors.image.msg %>

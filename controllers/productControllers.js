@@ -69,7 +69,7 @@ let controller = {
   update: (req, res) => {
     let productId = req.params.id;
     const resultValidation = validationResult(req);
-  
+    console.log(resultValidation)
     if (resultValidation.errors.length > 0) {
       return res.render("./product/edit",{errors:  resultValidation.mapped(), product:req.body});
     }
