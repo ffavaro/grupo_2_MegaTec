@@ -8,7 +8,7 @@ let controller = {
         })
     },
     login: (req,res) =>{
-        res.render('./users/singIn')
+        return res.render("./users/singIn",{errors:  [], old:[]});
     }
 }
 

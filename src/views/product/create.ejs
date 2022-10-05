@@ -14,12 +14,29 @@
                 </h1>
                 <fieldset>
                     <legend>Nombre del Producto</legend>
-                    <p><input type="text" name="name" id="name" placeholder="Procesador Intel Core i5"> <span class=" error"> </span></p>
+                    <p><input type="text" name="name" id="name" value="<%= locals.old ? old.name : null %>"
+                            placeholder="Procesador Intel Core i5">
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="text-danger">
+                                <%= errors.name.msg %>
+                            </div>
+                            <% } %>
+                                <span class=" error"> </span>
+                    </p>
+
                 </fieldset>
                 <fieldset>
                     <legend>Descripción</legend>
-                    <p><input type="text" name="description" id="description"
-                            placeholder="Este procesador ofrece más espacio en caché y la arquitectura ...." > </p>
+                    <p>
+                        <input type="text" name="description" id="description"
+                            value="<%= locals.old ? old.description : null %>"
+                            placeholder="Este procesador ofrece más espacio en caché y la arquitectura ....">
+                        <% if (locals.errors && errors.description) { %>
+                            <div class="text-danger">
+                                <%= errors.description.msg %>
+                            </div>
+                            <% } %>
+                    </p>
                 </fieldset>
                 <fieldset>
                     <legend>Precio</legend>
@@ -50,6 +67,11 @@
                 <fieldset>
                     <legend>Imagen del Producto</legend>
                     <input type="file" name="image" required id="image">
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="text-danger">
+                            <%= errors.image.msg %>
+                        </div>
+                        <% } %>
                 </fieldset>
                 <div class="botones">
                     <div class="reset"><input type="reset"></div>
@@ -57,7 +79,7 @@
                 </div>
             </form>
         </main>
-        <script src ="/js/validatorCreateProduct.js"></script>
+        <script src="/js/validatorCreateProduct.js"></script>
         <%- include('../partials/footer')%>
 </body>
 

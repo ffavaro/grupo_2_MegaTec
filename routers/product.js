@@ -3,13 +3,13 @@ const router = express.Router();
 const path = require('path')
 const productControllers = require('../controllers/productControllers');
 //express-validation
-const {body}=require('express-validator');
+//express validator
+const { body } = require('express-validator');
 const validations = [];
 //multer
 const multer =require('multer');
 // Middleware
 const userMiddleware = require('../middleware/userMiddleware');
-const { productValidator } = require('../middleware/productValidator');
 
 var storage = multer.diskStorage({
 	destination: (req, file, cb) => {
@@ -21,6 +21,41 @@ var storage = multer.diskStorage({
 })
 
 const uploadFile = multer({ storage: storage })
+
+const productValidate = [
+	body('name')
+    .notEmpty()
+    .withMessage('El nombre no puede ser vacio')
+    .bail()
+    .isLength({min: 5})
+    .withMessage('Caracteres requeridos 5!')
+    .bail(),
+
+    body('description')
+    .notEmpty()
+    .withMessage('El descripcion no puede ser vacio')
+    .bail()
+    .isLength({min: 20})
+    .withMessage('Caracteres requeridos 20!')
+    .bail(),
+
+    body('image')
+    .notEmpty()
+    .custom((value, {req}) =>{
+		let file = req.file;
+		let acceptedExtension = ['.jpg', '.jpeg', '.png', '.gif'];
+		if (!file){
+			throw new Error("Tienes que subir una imagen")
+		}
+		let fileExtension = path.extname(file.originalname);
+
+		if (!acceptedExtension.includes(fileExtension)){
+			throw new Error("Extensiones Validas: .JPG, .JPEG, .PNG, .GIF")
+		}
+
+		return true;
+	})
+];
 
 /*Get list product */
 router.get('/', userMiddleware.allAccess, productControllers.index);
@@ -34,14 +69,14 @@ router.get('/productCart', userMiddleware.withUser, productControllers.productCa
 // Creación de productos GET y envío de información POST
 // La ruta completa es /product/create, porque en app.js ya está este prefijo
 router.get('/create', userMiddleware.withUser, productControllers.create);
-router.post('/create', /* productValidator ,  */userMiddleware.withUser, uploadFile.single('image'), productControllers.store);
+router.post('/create', userMiddleware.withUser, uploadFile.single('image'), productValidate , productControllers.store);
 
 /*Product detail */
 router.get('/:id', userMiddleware.allAccess, productControllers.detail);
 
 /*Product edit */
-router.get('/edit/:id',  userMiddleware.withUser, productControllers.edit);
-router.post('/edit/:id', userMiddleware.withUser, uploadFile.single('image'), productControllers.update);
+router.get('/edit/:id', /*  userMiddleware.withUser, */ productControllers.edit);
+router.post('/edit/:id', /* userMiddleware.withUser, */ uploadFile.single('image'), productValidate, productControllers.update);
 
 /**Delete  */
 router.delete('/delete/:id', userMiddleware.withUser, productControllers.delete);

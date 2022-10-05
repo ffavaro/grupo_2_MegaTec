@@ -1,12 +1,5 @@
-const path = require("path");
-const fs = require("fs");
 const db = require("../database/models");
-const productsFilePath = path.join(
-  __dirname,
-  "../src/data/productsDataBase.json"
-);
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8")); // Convierte el JSON en un array de objetos literales
-
+const { validationResult } = require('express-validator' );
 let controller = {
   index: function (req, res) {
     db.Product.findAll().then((listProduct) => {
@@ -14,7 +7,12 @@ let controller = {
     });
   },
   store: function (req, res) {
-    console.log(req.body)
+    const resultValidation = validationResult(req);
+  
+    if (resultValidation.errors.length > 0) {
+      return res.render("./product/create",{errors:  resultValidation.mapped(), old:req.body});
+    }
+
     db.Product.create(
       {
         name: req.body.name,
@@ -31,7 +29,7 @@ let controller = {
     })
   },
   create: function (req, res) {
-    res.render("./product/create");
+    res.render("./product/create",{errors:  [], old:[]});
   },
   detail: function (req, res) {
     /**
@@ -65,12 +63,17 @@ let controller = {
   },
   edit: (req, res) => {
     db.Product.findByPk(req.params.id).then((product) => {
-      res.render("./product/edit", { product });
+      res.render("./product/edit", { product, errors:[], old:[] });
     });
   },
   update: (req, res) => {
     let productId = req.params.id;
-    console.log(req.file);
+    const resultValidation = validationResult(req);
+  
+    if (resultValidation.errors.length > 0) {
+      return res.render("./product/edit",{errors:  resultValidation.mapped(), product:req.body});
+    }
+
     db.Product.update(
       {
         name: req.body.name,
