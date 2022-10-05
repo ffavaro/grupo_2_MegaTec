@@ -102,7 +102,7 @@ let controller = {
   },
 
   profile: (req, res) => {
-    return res.render("./users/profile", { usuario: req.session.userLogged });
+    return res.render("./users/profile", { usuario: req.session.userLogged },);
   },
 
 };
