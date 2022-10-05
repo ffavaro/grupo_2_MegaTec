@@ -24,7 +24,20 @@ window.addEventListener("load", function() {
                 field.classList.remove('invalid')
                 field.nextElementSibling.innerText =('')
             }
-    
+    };
+    const validatorLastName= function(e) {
+        const field = e.target;
+        const fieldValue = e.target.value;
+            if (fieldValue.length === 0){
+                field.classList.add('invalid')
+                field.nextElementSibling.innerText =('Debes ingresar tú apellido')
+            }else if (fieldValue.length < 2){
+                field.classList.add('invalid')
+                field.nextElementSibling.innerText =('El apellido debe tener más de dos carácteres')
+            }else if (fieldValue.length > 2){
+                field.classList.remove('invalid')
+                field.nextElementSibling.innerText =('')
+            }
     }
     const validatorEmail = (e) => {
         const field = e.target;
@@ -74,7 +87,7 @@ window.addEventListener("load", function() {
    
 
         nombre.addEventListener('blur', validator)
-        lastName.addEventListener('blur', validator)
+        lastName.addEventListener('blur', validatorLastName)
         email.addEventListener('blur',validatorEmail)
         password.addEventListener('blur', validatorPassword)
         avatar.addEventListener('change', validatorImage)
