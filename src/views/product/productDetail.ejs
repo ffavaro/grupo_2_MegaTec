@@ -24,18 +24,23 @@
                     <br>
                     <h2>Precio</h2>
                     <p class="precios">$<%= product.price%></p>
-                    <p class="descuentos"> Descuento <%= product.discount%> %</p>
+                    <h2>Descuento</h2>
+                    <p class="descuentos"><%= product.discount%> %</p>
                 </div>
                 <div class="buttons">
+                    <div>
                     <button class="button-save">
                         Comprar
                     </button>
-                    <form  method="get" action="/product/edit/<%= product.id %>">
+                </div>
+                    <div><form  method="get" action="/product/edit/<%= product.id %>">
                         <button type="submit" class="button-edit">Editar</button>
                     </form>
-                    <form  method="post" action="/product/delete/<%= product.id %>?_method=DELETE">
-                        <button type="submit" class="button-delete">ELIMINAR</button>
+                </div>
+                <div><form  method="post" action="/product/delete/<%= product.id %>?_method=DELETE">
+                        <button type="submit" class="button-delete">Eliminar</button>
                     </form>
+                </div>
                 </div>
             </article>
             <article>
