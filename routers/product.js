@@ -39,16 +39,13 @@ const productValidate = [
     .withMessage('Caracteres requeridos 20!')
     .bail(),
 
-    /* body('image')
-    .notEmpty()
-    .custom((value, {req}) =>{
+    body('image')
+	.custom((value, {req}) =>{
 		let file = req.file;
 		let acceptedExtension = ['.jpg', '.jpeg', '.png', '.gif'];
-
 		if (!file){
 			throw new Error("Tienes que subir una imagen")
 		}
-		
 		let fileExtension = path.extname(file.originalname);
 
 		if (!acceptedExtension.includes(fileExtension)){
@@ -56,7 +53,7 @@ const productValidate = [
 		}
 
 		return true;
-	}) */
+	})
 ];
 
 /*Get list product */

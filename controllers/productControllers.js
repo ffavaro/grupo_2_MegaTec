@@ -73,7 +73,7 @@ let controller = {
     if (resultValidation.errors.length > 0) {
       return res.render("./product/edit",{errors:  resultValidation.mapped(), product:req.body});
     }
-
+    
     db.Product.update(
       {
         name: req.body.name,
