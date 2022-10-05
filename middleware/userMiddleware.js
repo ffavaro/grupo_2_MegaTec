@@ -21,11 +21,7 @@ let userMiddleware = {
     next();
   },
   allAccess: (req, res, next) => {
-    if (req.cookies.user === undefined && req.session.userLogged === undefined) {
       next();
-    }
-    else
-      return res.redirect("/home");
   },
   redirectProfile: (req, res, next) => {
     if (req.cookies.user != undefined) {
@@ -40,6 +36,7 @@ let userMiddleware = {
     next();
   },
   withUser: (req, res, next) => {
+    console.log(req.session.userLogged)
     if(req.session.userLogged !== undefined || req.cookies.user !== undefined)
     {
       next();
