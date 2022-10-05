@@ -27,16 +27,13 @@
                 </fieldset>
                 <fieldset>
                     <legend>Descripción</legend>
-                    <p>
-                        <input type="text" name="description" id="description"
-                            value="<%= locals.old ? old.description : null %>"
-                            placeholder="Este procesador ofrece más espacio en caché y la arquitectura ....">
-                        <% if (locals.errors && errors.description) { %>
-                            <div class="text-danger">
-                                <%= errors.description.msg %>
-                            </div>
-                            <% } %>
-                    </p>
+                    <p><input type="text" name="description" id="description"
+                            placeholder="Este procesador ofrece más espacio en caché y la arquitectura ...." ><span class=" error"> </span> </p>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="text-danger">
+                            <%= errors.description.msg %>
+                        </div>
+                        <% } %>
                 </fieldset>
                 <fieldset>
                     <legend>Precio</legend>
@@ -66,7 +63,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>Imagen del Producto</legend>
-                    <input type="file" name="image" required id="image">
+                    <input type="file" name="image" required id="image"><span class=" error"> </span>
                     <% if (locals.errors && errors.image) { %>
                         <div class="text-danger">
                             <%= errors.image.msg %>

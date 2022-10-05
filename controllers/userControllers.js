@@ -95,7 +95,7 @@ let controller = {
       .catch((error) => res.send(error));
   },
   profile: (req, res) => {
-    return res.render("./users/profile", { usuario: req.session.userLogged });
+    return res.render("./users/profile", { usuario: req.session.userLogged },);
   },
 };
 
